@@ -59,12 +59,25 @@ The unmodified Belleza Regular font and its SIL Open Font License are in
 `assets/fonts/`. Source: [Google Fonts, pinned commit](https://github.com/google/fonts/tree/c13390277dfb1fcc7415d84ef7ef9cfc1e52f8c1/ofl/belleza).
 Belleza supplies its normal 400 style; browser emphasis may be synthesized.
 
-## Remaining integrations
+## Email and editorial forms
 
-Email subscriptions and the private editorial submission channel are not yet
-connected. Their pages state this plainly and collect no information. Do not
-present either as working until the actual integrations are verified. There is
-no subscription backend, fake success state or automatic essay publication.
+The optional email and private submission forms use the approved Google Apps
+Script endpoint configured once in `assets/forms-adapter.js`. They send native
+HTTPS URL-encoded POST requests and navigate to the service's real receipt or
+error page. The public integration status is in `forms-integration.json`.
+An empty or invalid endpoint disables every form field and submit button.
+
+A new reader must explicitly request and then confirm a subscription. An essay
+submission is private editorial review only, never a subscription or publication
+agreement. No automatic newsletter is sent when the site publishes an essay.
+The adapter keeps only a random submission reference and sent flag in the
+browser history to reduce duplicates; no email or manuscript is stored there.
+
+Local contract and behavior checks pass. Live end-to-end email/submission
+behavior has not been tested by creating a subscription or manuscript record.
+The backend's Sheet IDs, signing secret and private records remain outside this
+repository. Its operating flags and permission checks are managed separately
+in the publication's Workspace account.
 
 Source backups, unpublished drafts, subscriber records, migration audit files
 and local preview fonts are deliberately outside this repository. The original

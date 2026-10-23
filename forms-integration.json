@@ -1,0 +1,45 @@
+{
+  "publication": "On Borrowed Times",
+  "site": "https://obtimes.com",
+  "policy_version": "2026-10-23-v1",
+  "connection_status": "public_routes_configured_and_verified; email_delivery_unverified",
+  "endpoint_configured": true,
+  "configuration_file": "assets/forms-adapter.js",
+  "endpoint_constant": "OBT_FORMS_ENDPOINT",
+  "transport": "Native HTTPS application/x-www-form-urlencoded POST; browser navigation to the service receipt",
+  "processor": "Google Apps Script, using the publication's Google Workspace account",
+  "public_routes": {
+    "subscription_request": "subscribe",
+    "editorial_submission": "submit_essay",
+    "email_confirmation_commit": "confirm_commit",
+    "unsubscribe_commit": "unsubscribe_commit"
+  },
+  "pages": {
+    "subscription": "/subscribe/",
+    "submission": "/submissions/#submit",
+    "privacy": "/privacy/",
+    "contact": "/about/#contact"
+  },
+  "properties": {
+    "all_essays_freely_accessible": true,
+    "explicit_unchecked_consent": true,
+    "new_subscription_requires_email_confirmation": true,
+    "submission_does_not_subscribe_author": true,
+    "submission_does_not_grant_publication_rights": true,
+    "file_uploads": false,
+    "automatic_newsletter_on_publication": false,
+    "form_data_in_browser_storage": false,
+    "tracking_pixels": false,
+    "pending_configuration_disables_all_form_fields": true,
+    "submission_history_reference": "Only a random request UUID and submitted Boolean; no email or manuscript"
+  },
+  "verification": {
+    "local_contract_and_behavior_checks": "passed",
+    "live_submission_or_email_test_performed": false,
+    "live_end_to_end_behavior": "Email confirmation, delivery, unsubscribe and saved editorial submission remain untested with real data",
+    "anonymous_form_rendering": "passed in signed-out browser",
+    "anonymous_invalid_payload_rejection": "passed; no recipient or manuscript submitted",
+    "known_platform_limit": "Google Apps Script can fail in browsers signed into multiple Google accounts; direct editor email fallback provided"
+  },
+  "endpoint": "https://script.google.com/macros/s/AKfycbx5kqYyRao8RYbyymfdbZgqkXym6v_nuFU4b4WqNPqn9RFEE2aAhbKzmtnFirLaJ8EiEQ/exec"
+}
