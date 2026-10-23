@@ -2,7 +2,7 @@
   "publication": "On Borrowed Times",
   "site": "https://obtimes.com",
   "policy_version": "2026-10-23-v1",
-  "connection_status": "public_routes_configured_and_verified; email_delivery_unverified",
+  "connection_status": "public_routes_and_owner_test_lifecycle_verified; external_email_deliverability_unverified",
   "endpoint_configured": true,
   "configuration_file": "assets/forms-adapter.js",
   "endpoint_constant": "OBT_FORMS_ENDPOINT",
@@ -18,7 +18,9 @@
     "subscription": "/subscribe/",
     "submission": "/submissions/#submit",
     "privacy": "/privacy/",
-    "contact": "/about/#contact"
+    "contact": "/about/#contact",
+    "confirmation": "/email/confirm/",
+    "unsubscribe": "/email/unsubscribe/"
   },
   "properties": {
     "all_essays_freely_accessible": true,
@@ -31,15 +33,18 @@
     "form_data_in_browser_storage": false,
     "tracking_pixels": false,
     "pending_configuration_disables_all_form_fields": true,
-    "submission_history_reference": "Only a random request UUID and submitted Boolean; no email or manuscript"
+    "submission_history_reference": "Only a random request UUID and submitted Boolean; no email or manuscript",
+    "email_links_require_explicit_post": true,
+    "email_action_pages_clear_url_fragment_before_other_scripts": true
   },
   "verification": {
     "local_contract_and_behavior_checks": "passed",
-    "live_submission_or_email_test_performed": false,
-    "live_end_to_end_behavior": "Email confirmation, delivery, unsubscribe and saved editorial submission remain untested with real data",
+    "live_submission_or_email_test_performed": true,
+    "live_end_to_end_behavior": "Owner-only live tests verified confirmation email receipt, pending-to-active confirmation, unsubscribe and private editorial record plus owner alert. Unchanged editorial retry retained one record. All test subscriptions were unsubscribed.",
     "anonymous_form_rendering": "passed in signed-out browser",
     "anonymous_invalid_payload_rejection": "passed; no recipient or manuscript submitted",
-    "known_platform_limit": "Google Apps Script can fail in browsers signed into multiple Google accounts; direct editor email fallback provided"
+    "known_platform_limit": "First-party email action pages avoid the observed multi-account Google GET-routing failure; native POST lifecycle passed in the affected browser. Legacy hosted helper GET URLs may still fail; direct editor email fallback is available.",
+    "external_recipient_deliverability": "unverified; no external recipient was contacted"
   },
   "endpoint": "https://script.google.com/macros/s/AKfycbx5kqYyRao8RYbyymfdbZgqkXym6v_nuFU4b4WqNPqn9RFEE2aAhbKzmtnFirLaJ8EiEQ/exec"
 }
