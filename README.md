@@ -83,3 +83,21 @@ Source backups, unpublished drafts, subscriber records, migration audit files
 and local preview fonts are deliberately outside this repository. The original
 publication should remain available until the live migration and email
 continuity checks are complete.
+
+## Audio editions
+
+`scripts/integrate_audio.py --manifest <reviewed-manifest.json>` attaches local,
+full-length recordings to the current essay HTML without rebuilding the site.
+The private manifest must confirm the selected voice and narration scope and
+supply every essay’s reviewed recording, measured duration, file hash, prepared
+narration-script path and hash, and current authored-HTML hash. It validates all
+eleven entries before writing any pages; `--check-only` performs the same checks
+without edits.
+
+Recordings live in `assets/audio/`. Players use native browser controls with
+manual playback, optional speed selection and a download link. No placeholder
+player is added while a recording is missing. Audio integration leaves the
+written essays, citation markers, captions and PDF editions unchanged. The
+narration preparation, review evidence and voice-model files stay outside this
+repository. Review the complete spoken text before integration; the written
+essay remains the accessible transcript, with its captions and references intact.
