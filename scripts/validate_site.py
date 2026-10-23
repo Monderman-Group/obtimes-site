@@ -42,18 +42,22 @@ class Page(HTMLParser):
 
 
 pages = {}
+email_action_pages = {'email/confirm/index.html', 'email/unsubscribe/index.html'}
 for file in ROOT.rglob('*.html'):
     parser = Page()
     parser.feed(file.read_text())
     pages[file] = parser
 for file, page in pages.items():
     relative = file.relative_to(ROOT).as_posix()
-    if relative != '404.html':
+    if relative in email_action_pages:
+        if not page.noindex or page.meta.get('referrer') != 'no-referrer':
+            errors.append(f'{relative}: email action privacy metadata missing')
+    elif relative != '404.html':
         if page.noindex:
             errors.append(f'{relative}: unexpected noindex')
         if len(page.canonicals) != 1 or not page.canonicals[0].startswith('https://obtimes.com/'):
             errors.append(f'{relative}: canonical missing or incorrect')
-    for key in ('og:title', 'og:description', 'og:type', 'og:url', 'og:image', 'twitter:card'):
+    for key in (() if relative in email_action_pages else ('og:title', 'og:description', 'og:type', 'og:url', 'og:image', 'twitter:card')):
         if not page.meta.get(key):
             errors.append(f'{relative}: missing {key}')
     for image in page.images:
@@ -117,7 +121,14 @@ assert (ROOT / 'assets/fonts/OFL.txt').is_file()
 assert len(list((ROOT / 'essays').glob('*/index.html'))) == 11
 assert len(list((ROOT / 'downloads').glob('*.pdf'))) == 11
 sitemap = ET.parse(ROOT / 'sitemap.xml').getroot()
-assert len(sitemap) == len(pages) - 1
+expected_urls = {
+    page.canonicals[0] for file, page in pages.items()
+    if file.relative_to(ROOT).as_posix() not in email_action_pages | {'404.html'}
+    and len(page.canonicals) == 1
+}
+listed_urls = [entry.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text for entry in sitemap]
+if len(listed_urls) != len(set(listed_urls)) or set(listed_urls) != expected_urls:
+    errors.append('Sitemap must include each indexable canonical page exactly once, excluding email action pages')
 report = {'passed': not errors, 'html_pages': len(pages), 'essay_pages': 11, 'optional_pdfs': 11, 'local_references_checked': checked, 'errors': errors}
 print(json.dumps(report, indent=2))
 sys.exit(0 if not errors else 1)
