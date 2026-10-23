@@ -1,0 +1,39 @@
+name: Publish On Borrowed Times
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the publication
+        uses: actions/checkout@v6
+      - name: Validate public files
+        run: python3 scripts/validate_site.py
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Stage public files for the Pages base path
+        run: python3 scripts/prepare_pages.py --base-path "${{ steps.pages.outputs.base_path }}" --output _site
+      - name: Upload the static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Publish GitHub Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
