@@ -1,0 +1,59 @@
+{
+  "schema": "obt-calendar-year-pronunciation-v1",
+  "release": "20261028.1",
+  "normalizer_sha256": "40bda75e419713738516cfb27f75825715c561f1312720fd0c2d1dded0d71986",
+  "articles": [
+    {
+      "slug": "ai-wont-land-in-the-middle",
+      "script_sha256": "c7d1bf1a0dc7ed3f25be49ee4ace242c76211532ea921ef20f14a6f1601ecd35",
+      "previous_audio_sha256": "ae95479254408bc62e56cf4626a6b94d91a44a42a61d0f387c50341926a05f7b",
+      "audio_sha256": "4a7e02573ff57e54aa53a8efaa763541e6f2644a4f7194cbcf7c8a372ba78b32",
+      "changed_native_chunks": [
+        "main-001",
+        "main-003"
+      ],
+      "reused_native_chunks": [
+        "main-002",
+        "main-004",
+        "main-005",
+        "main-006",
+        "main-007",
+        "main-008",
+        "main-009",
+        "main-010",
+        "main-011"
+      ],
+      "reviewed_calendar_years": {
+        "ai-wont-land-in-the-middle:main:001": {
+          "source_sha256": "9effffdc7cf5a91f106c075be84ab5c775e696f91ab84149ca474ff02c7b9a37",
+          "spans": [
+            {
+              "start": 637,
+              "end": 641,
+              "written": "2100"
+            }
+          ]
+        },
+        "ai-wont-land-in-the-middle:main:003": {
+          "source_sha256": "65ab1669618b749ba733740b271ab961ad3697a104c2e2d9c0e683d2b06dba50",
+          "spans": [
+            {
+              "start": 149,
+              "end": 153,
+              "written": "1916"
+            },
+            {
+              "start": 190,
+              "end": 194,
+              "written": "1968"
+            }
+          ]
+        }
+      },
+      "voice_reference_sha256": "831fd91e3ee41dee304fc0b61b7c49b9f4e8de1c88caab4f3441af320d16760b",
+      "independent_exact_coverage": true,
+      "source_prose_unchanged": true
+    }
+  ],
+  "status": "NEW_ESSAY_READY_ARCHIVE_IN_PROGRESS"
+}
