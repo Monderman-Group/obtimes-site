@@ -10,6 +10,12 @@ class CalendarReadings(unittest.TestCase):
  def test_range_decade_and_punctuation(self):
   s='From 1916–1968; the 1980s and 2026–27.'
   self.assertEqual(normalize_calendar_years(s,candidates(s))[0],'From nineteen sixteen–nineteen sixty eight; the nineteen eighties and twenty twenty six–27.')
+ def test_reviewed_range_connector(self):
+  s='In 2018–2021 and fiscal 2026–27; model 2026-27 remains an identifier.'
+  spans=[dict(start=s.index(raw),end=s.index(raw)+len(raw),written=raw) for raw in ['2018–2021','2026–27']]
+  result,receipt=normalize_calendar_years(s,spans)
+  self.assertEqual(result,'In twenty eighteen to twenty twenty one and fiscal twenty twenty six to twenty seven; model 2026-27 remains an identifier.')
+  self.assertEqual([r['written'] for r in receipt],['2018–2021','2026–27'])
  def test_unreviewed_unchanged(self):
   s='1,916 people; $2026; 2026.5; identifier X2026; 2026.'
   self.assertEqual(normalize_calendar_years(s,[])[0],s)

@@ -11,6 +11,11 @@ CANDIDATE=re.compile(r"(?<![\w,.])(?:1\d{3}|20\d{2}|2100)(?:s|[’']s)?(?![\w]|[
 def under100(n):
     return SMALL[n] if n<20 else TENS[n//10]+(' '+SMALL[n%10] if n%10 else '')
 def spoken_year(token):
+    interval=re.fullmatch(r'(1\d{3}|20\d{2}|2100)[–-](\d{2}|1\d{3}|20\d{2}|2100)',token)
+    if interval:
+        endpoint=interval[2]
+        ending=spoken_year(endpoint) if len(endpoint)==4 else (under100(int(endpoint)) if int(endpoint)>=10 else 'oh '+SMALL[int(endpoint)])
+        return spoken_year(interval[1])+' to '+ending
     m=re.fullmatch(r"(1\d{3}|20\d{2}|2100)(s|[’']s)?",token,re.I)
     if not m:raise ValueError('Expected a reviewed calendar year: '+token)
     year=int(m[1]);suffix=m[2] or '';century,last=divmod(year,100)
@@ -32,7 +37,8 @@ def normalize_calendar_years(text,reviewed_spans):
         start,end=item['start'],item['end'];written=item.get('written',item.get('year'))
         if not(last<=start<end<=len(text)) or text[start:end]!=written:
             raise ValueError('Calendar receipt does not match this exact source')
-        if not any(m.start()==start and m.end()==end for m in CANDIDATE.finditer(text)):
+        explicit_range=re.fullmatch(r'(?:1\d{3}|20\d{2}|2100)[–-](?:\d{2}|1\d{3}|20\d{2}|2100)',written)
+        if not any(m.start()==start and m.end()==end for m in CANDIDATE.finditer(text)) and not (explicit_range and (start==0 or not text[start-1].isalnum()) and (end==len(text) or not text[end].isalnum())):
             raise ValueError('Year span is not a complete standalone candidate')
         entries.append(dict(start=start,end=end,written=written,spoken=spoken_year(written)));last=end
     result=text

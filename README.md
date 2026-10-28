@@ -101,3 +101,13 @@ written essays, citation markers, captions and PDF editions unchanged. The
 narration preparation, review evidence and voice-model files stay outside this
 repository. Review the complete spoken text before integration; the written
 essay remains the accessible transcript, with its captions and references intact.
+
+Calendar dates need a pronunciation review before synthesis. Use
+`scripts/spoken_years.py` to prepare spoken forms for context-reviewed dates,
+for example `1916` as “nineteen sixteen” and `2026` as “twenty twenty-six.”
+Review ranges as well, with a spoken “to” between their endpoints. Keep the
+written essay and canonical narration text intact; store the source-bound
+spans, prepared speech-input hash and accepted recording hash in the dated
+pronunciation receipt. Quantities, identifiers, captions and reference lists
+must not be treated as calendar dates. Verify the generated passages before
+publishing, while retaining each publication’s selected voice.
