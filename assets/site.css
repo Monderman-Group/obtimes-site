@@ -37,3 +37,6 @@
 /* Preserve the complete Stalin illustration on the shared artwork ground. */
 .article-cover--full-frame>.cover{height:auto;max-height:none;aspect-ratio:auto}
 .article-cover--full-frame>.cover img{width:100%;height:auto;padding:0}
+
+/* Blend light paper artwork into the shared cover ground. */
+.cover--paper-art{isolation:isolate}.cover--paper-art>img{mix-blend-mode:darken}
