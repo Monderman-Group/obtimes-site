@@ -118,8 +118,8 @@ for file in ROOT.rglob('*'):
 assert (ROOT / 'CNAME').read_text().strip() == 'obtimes.com'
 assert (ROOT / '.nojekyll').exists()
 assert (ROOT / 'assets/fonts/OFL.txt').is_file()
-assert len(list((ROOT / 'essays').glob('*/index.html'))) == 13
-assert len(list((ROOT / 'downloads').glob('*.pdf'))) == 13
+assert len(list((ROOT / 'essays').glob('*/index.html'))) == 14
+assert len(list((ROOT / 'downloads').glob('*.pdf'))) == 14
 sitemap = ET.parse(ROOT / 'sitemap.xml').getroot()
 expected_urls = {
     page.canonicals[0] for file, page in pages.items()
@@ -129,6 +129,6 @@ expected_urls = {
 listed_urls = [entry.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text for entry in sitemap]
 if len(listed_urls) != len(set(listed_urls)) or set(listed_urls) != expected_urls:
     errors.append('Sitemap must include each indexable canonical page exactly once, excluding email action pages')
-report = {'passed': not errors, 'html_pages': len(pages), 'essay_pages': 13, 'optional_pdfs': 13, 'local_references_checked': checked, 'errors': errors}
+report = {'passed': not errors, 'html_pages': len(pages), 'essay_pages': 14, 'optional_pdfs': 14, 'local_references_checked': checked, 'errors': errors}
 print(json.dumps(report, indent=2))
 sys.exit(0 if not errors else 1)
