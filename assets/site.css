@@ -40,3 +40,8 @@
 
 /* Blend light paper artwork into the shared cover ground. */
 .cover--paper-art{isolation:isolate}.cover--paper-art>img{mix-blend-mode:darken}
+
+/* Preserve landscape feature art without forcing it into the default tall frame. */
+.feature--full-art{min-height:0}
+.feature--full-art .feature-art,.feature--full-art .feature-art .cover{min-height:0;height:auto;aspect-ratio:3/2}
+.feature--full-art .feature-art img{transform:none}
