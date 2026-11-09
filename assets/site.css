@@ -41,6 +41,11 @@
 /* Blend light paper artwork into the shared cover ground. */
 .cover--paper-art{isolation:isolate}.cover--paper-art>img{mix-blend-mode:darken}
 
+/* Place the poster's footnote marker immediately before its highlighted qualification. */
+.cover--terms-asterisk{position:relative;container-type:inline-size}
+.cover--terms-asterisk::after{content:'*';position:absolute;z-index:2;left:34.4%;top:88.25%;color:#111;pointer-events:none;font-family:Georgia,'Times New Roman',serif;font-size:2cqw;line-height:1}
+.story .cover--terms-asterisk::after{left:35.65%;top:85.25%}
+
 /* Preserve landscape feature art without forcing it into the default tall frame. */
 .feature--full-art{min-height:0}
 .feature--full-art .feature-art,.feature--full-art .feature-art .cover{min-height:0;height:auto;aspect-ratio:3/2}
