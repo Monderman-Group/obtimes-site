@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://obtimes.com/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/about/</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://obtimes.com/essays/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/essays/can-europes-social-model-save-itself/</loc>
@@ -70,10 +70,37 @@
   </url>
   <url>
     <loc>https://obtimes.com/topics/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/privacy/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
-<url><loc>https://obtimes.com/essays/stalins-org-chart/</loc></url><url><loc>https://obtimes.com/essays/ai-wont-land-in-the-middle/</loc><lastmod>2026-10-28</lastmod></url><url><loc>https://obtimes.com/essays/companies-dont-have-a-culture/</loc><lastmod>2026-10-28</lastmod></url><url><loc>https://obtimes.com/essays/how-putin-hollowed-the-russian-state/</loc><lastmod>2026-11-04</lastmod></url><url><loc>https://obtimes.com/essays/fast-to-cut-slow-to-build/</loc><lastmod>2026-11-04</lastmod></url><url><loc>https://obtimes.com/essays/companies-cant-buy-a-culture/</loc><lastmod>2026-11-08</lastmod></url></urlset>
+  <url>
+    <loc>https://obtimes.com/essays/stalins-org-chart/</loc>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/ai-wont-land-in-the-middle/</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/companies-dont-have-a-culture/</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/how-putin-hollowed-the-russian-state/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/fast-to-cut-slow-to-build/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/companies-cant-buy-a-culture/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/cybercrime-and-state-power-in-russia/</loc>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+</urlset>
