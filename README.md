@@ -46,6 +46,13 @@ Workflow reference: [GitHub's custom Pages workflow documentation](https://docs.
 - Matching optional downloads are in `downloads/`.
 - `assets/site.css` holds the responsive design; `assets/site.js` implements
   search and topic filtering using the local `assets/search-index.js` catalogue.
+- Every essay with an `.essay-header` and `h1` receives the shared Share action
+  from `assets/site.js`, including future essays. It opens a keyboard-accessible
+  dialog for copying the canonical link, text/iMessage, email, and social services.
+  Supported devices use the native share sheet for Messages and other installed
+  apps; the OS chooses the message transport. Direct SMS links are a fallback
+  where native sharing is unavailable, with manual copying always available.
+  Sharing uses ordinary links and browser APIs, with no third-party tracking SDK.
 - The masthead highlights **BORROWED**, and every cover uses the same pale
   background, `#EEF0E8`.
 
