@@ -1,0 +1,2756 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="graphic-title graphic-description" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="1960" viewBox="0 0 460.8 1411.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<title id="graphic-title">The week of outages</title>
+<desc id="graphic-description">Calendar covering November 10 through 17, 2026, eight calendar days. Apple began outages on November 10 and 17; Microsoft on November 12; FAA and Workday on November 13; Chase and United on November 16. Workday recovery continued November 14. Microsoft's outage continued into November 13. Causes shown are those reported in the essay, with unknowns and the FAA investigation labeled. This is not a complete outage census.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Obtimes exact-data graphics</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1411.2 
+L 460.8 1411.2 
+L 460.8 0 
+L 0 0 
+z
+" style="fill: #eef0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 21.6 167.04 
+L 230.4 167.04 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 230.4 167.04 
+L 439.2 167.04 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 230.4 177.84 
+L 230.4 432.72 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 21.6 443.52 
+L 230.4 443.52 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 230.4 443.52 
+L 439.2 443.52 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 230.4 454.32 
+L 230.4 709.2 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 241.2 601.2 
+L 428.4 601.2 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 21.6 720 
+L 230.4 720 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 230.4 720 
+L 439.2 720 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 230.4 730.8 
+L 230.4 985.68 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 21.6 996.48 
+L 230.4 996.48 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 32.4 1154.16 
+L 219.6 1154.16 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 230.4 996.48 
+L 439.2 996.48 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 230.4 1007.28 
+L 230.4 1262.16 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #d5dbce"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 21.6 1272.96 
+L 439.2 1272.96 
+" clip-path="url(#p715fac618e)" style="fill: none; stroke: #bec6b5"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 29.52 183.6 
+L 36.9072 182.16 
+L 45.5256 182.88 
+L 57.4272 181.44 
+L 70.56 182.88 
+L 69.84 212.4 
+L 60.3 213.84 
+L 46.7568 213.12 
+L 35.676 214.56 
+L 29.52 213.12 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 29.52 460.08 
+L 36.9072 458.64 
+L 45.5256 459.36 
+L 57.4272 457.92 
+L 70.56 459.36 
+L 69.84 488.88 
+L 60.3 490.32 
+L 46.7568 489.6 
+L 35.676 491.04 
+L 29.52 489.6 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 238.32 460.08 
+L 245.7072 458.64 
+L 254.3256 459.36 
+L 266.2272 457.92 
+L 279.36 459.36 
+L 278.64 488.88 
+L 269.1 490.32 
+L 255.5568 489.6 
+L 244.476 491.04 
+L 238.32 489.6 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 29.52 1013.04 
+L 36.9072 1011.6 
+L 45.5256 1012.32 
+L 57.4272 1010.88 
+L 70.56 1012.32 
+L 69.84 1041.84 
+L 60.3 1043.28 
+L 46.7568 1042.56 
+L 35.676 1044 
+L 29.52 1042.56 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 238.32 1013.04 
+L 245.7072 1011.6 
+L 254.3256 1012.32 
+L 266.2272 1010.88 
+L 279.36 1012.32 
+L 278.64 1041.84 
+L 269.1 1043.28 
+L 255.5568 1042.56 
+L 244.476 1044 
+L 238.32 1042.56 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 21.6 1293.84 
+L 25.2288 1292.4 
+L 29.4624 1293.12 
+L 35.3088 1291.68 
+L 41.76 1293.12 
+L 41.04 1309.68 
+L 36.72 1311.12 
+L 30.0672 1310.4 
+L 24.624 1311.84 
+L 21.6 1310.4 
+z
+" clip-path="url(#p715fac618e)" style="fill: #f5e329"/>
+   </g>
+   <g id="text_1">
+    <!-- ON BORROWED TIMES -->
+    <g style="fill: #50594e" transform="translate(21.6 32.87475) scale(0.144 -0.144)">
+     <defs>
+      <path id="Belleza-Regular-4f" d="M 2131 -77 
+Q 1600 -77 1165 163 
+Q 730 403 474 867 
+Q 218 1331 218 2003 
+Q 218 2528 358 2918 
+Q 499 3309 739 3574 
+Q 979 3840 1276 4003 
+Q 1574 4166 1891 4240 
+Q 2208 4314 2502 4314 
+Q 3040 4314 3475 4077 
+Q 3910 3840 4166 3379 
+Q 4422 2918 4422 2246 
+Q 4422 1722 4281 1331 
+Q 4141 941 3897 672 
+Q 3654 403 3356 236 
+Q 3059 70 2742 -3 
+Q 2426 -77 2131 -77 
+z
+M 2317 134 
+Q 2701 134 2973 320 
+Q 3245 506 3414 800 
+Q 3584 1094 3664 1440 
+Q 3744 1786 3744 2099 
+Q 3744 2496 3664 2851 
+Q 3584 3206 3401 3475 
+Q 3219 3744 2915 3897 
+Q 2611 4051 2157 4051 
+Q 1728 3904 1446 3603 
+Q 1165 3302 1030 2912 
+Q 896 2522 896 2099 
+Q 896 1709 976 1353 
+Q 1056 998 1222 723 
+Q 1389 448 1661 291 
+Q 1933 134 2317 134 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-4e" d="M 3686 -70 
+L 883 3437 
+L 858 3437 
+L 858 0 
+L 576 0 
+L 576 4237 
+L 1050 4237 
+L 3488 1158 
+L 3514 1158 
+L 3514 4237 
+L 3795 4237 
+L 3795 -70 
+L 3686 -70 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-20" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-42" d="M 576 0 
+L 576 4237 
+L 1786 4237 
+Q 2253 4237 2614 4131 
+Q 2976 4026 3184 3808 
+Q 3392 3590 3392 3238 
+Q 3392 2886 3142 2624 
+Q 2893 2362 2458 2234 
+Q 3066 2118 3350 1827 
+Q 3635 1536 3635 1190 
+Q 3635 864 3465 633 
+Q 3296 403 3027 265 
+Q 2758 128 2460 64 
+Q 2163 0 1907 0 
+L 576 0 
+z
+M 1197 2298 
+L 1658 2298 
+Q 2080 2298 2317 2429 
+Q 2554 2560 2650 2771 
+Q 2746 2982 2746 3206 
+Q 2746 3450 2579 3670 
+Q 2413 3891 2029 4006 
+Q 1850 4006 1606 3968 
+Q 1363 3930 1197 3878 
+L 1197 2298 
+z
+M 1779 224 
+Q 2074 224 2336 323 
+Q 2598 422 2761 627 
+Q 2925 832 2925 1139 
+Q 2925 1408 2758 1629 
+Q 2592 1850 2310 1981 
+Q 2029 2112 1683 2112 
+L 1197 2112 
+L 1197 288 
+Q 1286 262 1456 243 
+Q 1626 224 1779 224 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-52" d="M 3181 -90 
+L 1696 2022 
+L 1203 2022 
+L 1203 0 
+L 576 0 
+L 576 4237 
+L 1958 4237 
+Q 2374 4237 2707 4112 
+Q 3040 3987 3235 3747 
+Q 3430 3507 3430 3155 
+Q 3430 2701 3084 2435 
+Q 2739 2170 2208 2074 
+L 3923 0 
+L 3181 -90 
+z
+M 1203 2214 
+L 1613 2214 
+Q 2080 2214 2326 2348 
+Q 2573 2483 2669 2691 
+Q 2765 2899 2765 3123 
+Q 2765 3155 2749 3267 
+Q 2733 3379 2669 3523 
+Q 2605 3667 2461 3798 
+Q 2317 3930 2061 4000 
+Q 1875 4000 1622 3968 
+Q 1370 3936 1203 3891 
+L 1203 2214 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-57" d="M 1683 -96 
+L 64 4237 
+L 762 4237 
+L 1888 768 
+L 2605 2906 
+L 2106 4237 
+L 2803 4237 
+L 3930 768 
+L 5094 4237 
+L 5414 4237 
+L 3827 -96 
+L 3725 -96 
+L 2746 2528 
+L 1786 -96 
+L 1683 -96 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-45" d="M 576 0 
+L 576 4237 
+L 3142 4237 
+L 3078 3808 
+L 1888 4006 
+Q 1702 4006 1542 3977 
+Q 1382 3949 1197 3898 
+L 1197 2342 
+L 2618 2342 
+L 2618 2099 
+L 1197 2099 
+L 1197 230 
+L 3181 429 
+L 3117 0 
+L 576 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-44" d="M 576 0 
+L 576 4237 
+L 1786 4237 
+Q 2214 4237 2649 4118 
+Q 3085 4000 3449 3734 
+Q 3814 3469 4035 3043 
+Q 4256 2618 4256 2003 
+Q 4256 1472 4064 1091 
+Q 3872 710 3542 470 
+Q 3213 230 2790 115 
+Q 2368 0 1907 0 
+L 576 0 
+z
+M 1779 218 
+Q 2298 218 2704 422 
+Q 3110 627 3344 1046 
+Q 3578 1466 3578 2106 
+Q 3578 2598 3395 2988 
+Q 3213 3379 2896 3641 
+Q 2579 3904 2176 4006 
+Q 1952 4006 1667 3968 
+Q 1382 3930 1203 3872 
+L 1203 275 
+Q 1293 250 1459 234 
+Q 1626 218 1779 218 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-54" d="M 1402 0 
+L 1402 3930 
+Q 1299 3955 1196 3968 
+Q 1094 3981 966 3981 
+L 102 3782 
+L 64 4237 
+L 3360 4237 
+L 3328 3782 
+L 2458 3981 
+Q 2330 3981 2227 3968 
+Q 2125 3955 2022 3930 
+L 2022 0 
+L 1402 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-49" d="M 576 0 
+L 576 4237 
+L 1165 4237 
+L 1165 0 
+L 576 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-4d" d="M 525 0 
+L 762 4237 
+L 1357 4237 
+L 2835 1005 
+L 4250 4237 
+L 4902 4237 
+L 5139 0 
+L 4486 0 
+L 4314 3642 
+L 4288 3642 
+L 2675 0 
+L 2586 0 
+L 1005 3494 
+L 979 3494 
+L 806 0 
+L 525 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-53" d="M 1677 -77 
+Q 1299 -77 963 12 
+Q 627 102 442 173 
+L 442 474 
+Q 550 422 736 342 
+Q 922 262 1146 204 
+Q 1370 147 1581 147 
+Q 2003 147 2262 368 
+Q 2522 589 2522 992 
+Q 2522 1242 2374 1421 
+Q 2227 1600 1993 1747 
+Q 1760 1894 1497 2032 
+Q 1235 2170 1001 2333 
+Q 768 2496 621 2717 
+Q 474 2938 474 3238 
+Q 474 3488 608 3734 
+Q 742 3981 1036 4147 
+Q 1331 4314 1811 4314 
+Q 2074 4314 2381 4250 
+Q 2688 4186 2912 4115 
+L 2848 3680 
+Q 2477 3840 2112 3945 
+Q 1747 4051 1370 4051 
+Q 1184 3962 1110 3818 
+Q 1037 3674 1037 3501 
+Q 1037 3245 1190 3049 
+Q 1344 2854 1590 2691 
+Q 1837 2528 2109 2374 
+Q 2381 2221 2627 2041 
+Q 2874 1862 3027 1638 
+Q 3181 1414 3181 1114 
+Q 3181 781 3014 509 
+Q 2848 237 2515 80 
+Q 2182 -77 1677 -77 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-4f"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(72.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(140.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-42" transform="translate(165.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-4f" transform="translate(230.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(302.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(366.499924 0)"/>
+     <use xlink:href="#Belleza-Regular-4f" transform="translate(430.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-57" transform="translate(502.799896 0)"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(588.399887 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(644.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(715.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-54" transform="translate(740.399857 0)"/>
+     <use xlink:href="#Belleza-Regular-49" transform="translate(793.899841 0)"/>
+     <use xlink:href="#Belleza-Regular-4d" transform="translate(821.099838 0)"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(909.999832 0)"/>
+     <use xlink:href="#Belleza-Regular-53" transform="translate(966.199829 0)"/>
+    </g>
+   </g>
+   <g id="text_2">
+    <!-- The week of outages -->
+    <g style="fill: #191c1b" transform="translate(21.6 74.927025) scale(0.3024 -0.3024)">
+     <defs>
+      <path id="Belleza-Regular-68" d="M 486 0 
+L 486 4371 
+L 1005 4371 
+L 1005 2483 
+Q 1242 2707 1485 2832 
+Q 1728 2957 2010 2957 
+Q 2163 2957 2339 2880 
+Q 2515 2803 2640 2595 
+Q 2765 2387 2765 1990 
+L 2765 0 
+L 2227 0 
+L 2227 1926 
+Q 2227 2227 2121 2390 
+Q 2016 2554 1728 2554 
+Q 1587 2554 1398 2474 
+Q 1210 2394 1024 2214 
+L 1024 0 
+L 486 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-65" d="M 1555 -77 
+Q 1158 -77 841 89 
+Q 525 256 345 576 
+Q 166 896 166 1357 
+Q 166 1888 371 2246 
+Q 576 2605 909 2787 
+Q 1242 2970 1619 2970 
+Q 1920 2970 2166 2813 
+Q 2413 2656 2563 2345 
+Q 2714 2035 2714 1574 
+L 672 1574 
+Q 672 1075 829 790 
+Q 986 506 1238 390 
+Q 1491 275 1766 275 
+Q 2016 275 2208 326 
+Q 2400 378 2560 448 
+L 2560 224 
+Q 2362 109 2106 16 
+Q 1850 -77 1555 -77 
+z
+M 698 1766 
+L 2195 1766 
+Q 2176 2054 2070 2233 
+Q 1965 2413 1821 2505 
+Q 1677 2598 1533 2633 
+Q 1389 2669 1293 2669 
+Q 1075 2566 912 2326 
+Q 749 2086 698 1766 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-77" d="M 1312 -83 
+L 64 2893 
+L 653 2893 
+L 1504 634 
+L 2080 2208 
+L 1792 2893 
+L 2381 2893 
+L 3232 634 
+L 4064 2893 
+L 4314 2893 
+L 3142 -83 
+L 3040 -83 
+L 2195 1914 
+L 1408 -83 
+L 1312 -83 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-6b" d="M 2374 -83 
+L 1018 1606 
+L 1018 0 
+L 480 0 
+L 480 4371 
+L 1018 4371 
+L 1018 1664 
+L 2496 2893 
+L 2918 2893 
+L 1414 1754 
+L 3014 0 
+L 2374 -83 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-6f" d="M 1466 -77 
+Q 1107 -77 812 89 
+Q 518 256 345 579 
+Q 173 902 173 1363 
+Q 173 1818 317 2125 
+Q 461 2432 694 2617 
+Q 928 2803 1197 2886 
+Q 1466 2970 1715 2970 
+Q 2080 2970 2374 2803 
+Q 2669 2637 2841 2317 
+Q 3014 1997 3014 1530 
+Q 3014 1075 2867 768 
+Q 2720 461 2486 275 
+Q 2253 90 1984 6 
+Q 1715 -77 1466 -77 
+z
+M 1587 141 
+Q 1811 141 1971 262 
+Q 2131 384 2230 579 
+Q 2330 774 2378 998 
+Q 2426 1222 2426 1434 
+Q 2426 1786 2339 2077 
+Q 2253 2368 2051 2547 
+Q 1850 2726 1498 2726 
+Q 1114 2579 934 2214 
+Q 755 1850 755 1434 
+Q 755 1094 838 796 
+Q 922 499 1104 320 
+Q 1286 141 1587 141 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-66" d="M 659 0 
+L 659 2662 
+L 134 2765 
+L 134 2893 
+L 666 2893 
+Q 691 3328 841 3677 
+Q 992 4026 1257 4227 
+Q 1523 4429 1901 4429 
+Q 2016 4429 2144 4406 
+Q 2272 4384 2387 4352 
+L 2323 3936 
+Q 2227 3987 2089 4032 
+Q 1952 4077 1827 4102 
+Q 1702 4128 1626 4128 
+Q 1504 4064 1424 3913 
+Q 1344 3763 1296 3574 
+Q 1248 3386 1225 3203 
+Q 1203 3021 1197 2893 
+L 1971 2893 
+L 1971 2662 
+L 1197 2662 
+L 1197 0 
+L 659 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-75" d="M 1082 -77 
+Q 934 -77 758 -3 
+Q 582 70 454 278 
+Q 326 486 326 877 
+L 326 2893 
+L 870 2893 
+L 870 845 
+Q 870 550 976 387 
+Q 1082 224 1363 224 
+Q 1510 224 1676 339 
+Q 1843 454 1997 634 
+L 1997 2893 
+L 2541 2893 
+L 2541 858 
+Q 2541 640 2601 502 
+Q 2662 365 2742 285 
+Q 2822 205 2874 160 
+L 2541 -77 
+L 2022 390 
+Q 1786 166 1574 44 
+Q 1363 -77 1082 -77 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-74" d="M 1203 -77 
+Q 941 -77 761 76 
+Q 582 230 582 595 
+L 582 2662 
+L 64 2765 
+L 64 2893 
+L 582 2893 
+L 582 3123 
+L 1120 3514 
+L 1120 2893 
+L 1882 2893 
+L 1882 2662 
+L 1120 2662 
+L 1120 563 
+Q 1120 384 1193 281 
+Q 1267 179 1472 179 
+Q 1562 179 1670 208 
+Q 1779 237 1882 275 
+L 1882 96 
+Q 1741 32 1565 -22 
+Q 1389 -77 1203 -77 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-61" d="M 2349 -83 
+L 1830 384 
+Q 1600 173 1379 48 
+Q 1158 -77 896 -77 
+Q 634 -77 422 96 
+Q 211 269 211 589 
+Q 211 838 377 1008 
+Q 544 1178 800 1280 
+Q 1056 1382 1331 1433 
+Q 1606 1485 1824 1498 
+L 1824 2099 
+Q 1824 2630 1210 2630 
+Q 1050 2630 842 2595 
+Q 634 2560 378 2477 
+L 320 2637 
+Q 390 2694 556 2771 
+Q 723 2848 940 2909 
+Q 1158 2970 1382 2970 
+Q 1747 2970 1945 2864 
+Q 2144 2758 2227 2595 
+Q 2310 2432 2329 2256 
+Q 2349 2080 2349 1939 
+L 2349 851 
+Q 2349 634 2409 493 
+Q 2470 352 2550 275 
+Q 2630 198 2682 160 
+L 2349 -83 
+z
+M 1139 218 
+Q 1293 250 1449 342 
+Q 1606 435 1715 534 
+Q 1824 634 1824 678 
+L 1824 1338 
+Q 1344 1306 1059 1130 
+Q 774 954 774 755 
+Q 774 557 880 413 
+Q 986 269 1139 218 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-67" d="M 1274 -1421 
+Q 966 -1421 713 -1344 
+Q 461 -1267 313 -1110 
+Q 166 -954 166 -717 
+Q 166 -531 278 -336 
+Q 390 -141 691 -6 
+Q 550 45 473 147 
+Q 397 250 397 410 
+Q 397 570 528 733 
+Q 659 896 858 1050 
+Q 646 1158 512 1369 
+Q 378 1581 378 1888 
+Q 378 2189 486 2393 
+Q 595 2598 768 2726 
+Q 941 2854 1142 2912 
+Q 1344 2970 1530 2970 
+Q 1696 2970 1853 2918 
+Q 2010 2867 2131 2797 
+L 2694 2957 
+L 2822 2682 
+L 2426 2483 
+Q 2483 2381 2515 2262 
+Q 2547 2144 2547 1997 
+Q 2547 1696 2435 1491 
+Q 2323 1286 2144 1164 
+Q 1965 1043 1760 988 
+Q 1555 934 1370 934 
+Q 1325 934 1280 937 
+Q 1235 941 1190 947 
+Q 1133 928 1049 873 
+Q 966 819 905 742 
+Q 845 666 845 582 
+Q 845 442 1046 403 
+Q 1248 365 1619 365 
+Q 2189 365 2531 259 
+Q 2874 154 2874 -186 
+Q 2874 -486 2666 -771 
+Q 2458 -1056 2099 -1238 
+Q 1741 -1421 1274 -1421 
+z
+M 1453 1133 
+Q 2042 1133 2042 1933 
+Q 2042 2157 1962 2342 
+Q 1882 2528 1747 2643 
+Q 1613 2758 1453 2758 
+Q 1165 2758 1014 2531 
+Q 864 2304 864 1933 
+Q 864 1600 1037 1366 
+Q 1210 1133 1453 1133 
+z
+M 1376 -1126 
+Q 1760 -1126 2045 -979 
+Q 2330 -832 2490 -624 
+Q 2650 -416 2650 -243 
+Q 2522 -192 2336 -160 
+Q 2150 -128 1961 -118 
+Q 1773 -109 1626 -109 
+Q 1421 -109 1245 -102 
+Q 1069 -96 928 -70 
+Q 838 -147 742 -294 
+Q 646 -442 646 -608 
+Q 646 -826 816 -976 
+Q 986 -1126 1376 -1126 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-73" d="M 1075 -77 
+Q 794 -77 547 6 
+Q 301 90 179 154 
+L 179 397 
+Q 256 358 393 307 
+Q 531 256 694 217 
+Q 858 179 1005 179 
+Q 1344 179 1491 332 
+Q 1638 486 1638 646 
+Q 1638 838 1497 972 
+Q 1357 1107 1149 1219 
+Q 941 1331 729 1459 
+Q 518 1587 377 1763 
+Q 237 1939 237 2202 
+Q 237 2374 323 2550 
+Q 410 2726 605 2848 
+Q 800 2970 1133 2970 
+Q 1472 2970 1693 2909 
+Q 1914 2848 2022 2803 
+L 1958 2381 
+Q 1702 2522 1472 2598 
+Q 1242 2675 1082 2701 
+Q 909 2701 806 2573 
+Q 704 2445 704 2304 
+Q 704 2118 851 1987 
+Q 998 1856 1216 1741 
+Q 1434 1626 1648 1498 
+Q 1862 1370 2009 1197 
+Q 2157 1024 2157 762 
+Q 2157 416 1878 169 
+Q 1600 -77 1075 -77 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-54"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(53.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(103.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(150.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(175.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(244.099945 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(290.999939 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(337.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(387.199921 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(412.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(462.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(495.499878 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(520.499863 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(570.499847 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(618.499832 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(651.399826 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(695.79982 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(744.799805 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(791.699799 0)"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <!-- November 10–17, 2026 -->
+    <g style="fill: #50594e" transform="translate(21.6 110.705175) scale(0.1872 -0.1872)">
+     <defs>
+      <path id="Belleza-Regular-76" d="M 1318 -83 
+L 64 2893 
+L 627 2893 
+L 1510 653 
+L 2349 2893 
+L 2592 2893 
+L 1414 -83 
+L 1318 -83 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-6d" d="M 531 0 
+L 531 2010 
+Q 531 2234 470 2371 
+Q 410 2509 333 2589 
+Q 256 2669 205 2707 
+L 531 2950 
+L 1043 2483 
+Q 1318 2714 1548 2842 
+Q 1779 2970 2035 2970 
+Q 2355 2970 2515 2813 
+Q 2675 2656 2726 2451 
+Q 2797 2528 2941 2653 
+Q 3085 2778 3296 2874 
+Q 3507 2970 3763 2970 
+Q 4013 2970 4163 2861 
+Q 4314 2752 4390 2576 
+Q 4467 2400 4492 2201 
+Q 4518 2003 4518 1824 
+L 4518 0 
+L 3981 0 
+L 3981 1875 
+Q 3981 2042 3958 2205 
+Q 3936 2368 3840 2477 
+Q 3744 2586 3507 2586 
+Q 3309 2586 3097 2474 
+Q 2886 2362 2797 2221 
+L 2797 0 
+L 2253 0 
+L 2253 1907 
+Q 2253 2227 2157 2406 
+Q 2061 2586 1811 2586 
+Q 1638 2586 1465 2499 
+Q 1293 2413 1181 2320 
+Q 1069 2227 1069 2208 
+L 1069 0 
+L 531 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-62" d="M 1395 -83 
+Q 1158 -83 918 -22 
+Q 678 38 442 166 
+L 442 4371 
+L 979 4371 
+L 979 2490 
+Q 1184 2726 1430 2841 
+Q 1677 2957 1914 2957 
+Q 2195 2957 2441 2793 
+Q 2688 2630 2838 2297 
+Q 2989 1965 2989 1466 
+Q 2989 992 2768 643 
+Q 2547 294 2185 105 
+Q 1824 -83 1395 -83 
+z
+M 1619 186 
+Q 1888 186 2070 352 
+Q 2253 518 2345 793 
+Q 2438 1069 2438 1395 
+Q 2438 1760 2332 2009 
+Q 2227 2259 2057 2409 
+Q 1888 2560 1696 2618 
+Q 1504 2605 1341 2512 
+Q 1178 2419 1078 2320 
+Q 979 2221 979 2189 
+L 979 358 
+Q 1062 314 1241 250 
+Q 1421 186 1619 186 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-72" d="M 410 0 
+L 410 2893 
+L 781 2893 
+L 928 2355 
+Q 1011 2496 1161 2637 
+Q 1312 2778 1507 2883 
+Q 1702 2989 1907 3021 
+L 1971 2579 
+Q 1805 2579 1613 2508 
+Q 1421 2438 1245 2329 
+Q 1069 2221 947 2106 
+L 947 0 
+L 410 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-31" d="M 454 0 
+L 454 403 
+L 1363 339 
+L 1363 3136 
+L 506 2694 
+L 288 3066 
+L 1882 3712 
+L 1907 3712 
+L 1907 339 
+L 2816 403 
+L 2816 0 
+L 454 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-30" d="M 1466 -77 
+Q 1107 -77 809 131 
+Q 512 339 339 742 
+Q 166 1146 166 1722 
+Q 166 2285 313 2665 
+Q 461 3046 694 3270 
+Q 928 3494 1197 3593 
+Q 1466 3693 1715 3693 
+Q 2080 3693 2374 3494 
+Q 2669 3296 2845 2902 
+Q 3021 2509 3021 1926 
+Q 3021 1363 2873 979 
+Q 2726 595 2492 361 
+Q 2259 128 1987 25 
+Q 1715 -77 1466 -77 
+z
+M 1574 224 
+Q 1997 224 2211 627 
+Q 2426 1030 2426 1811 
+Q 2426 2253 2310 2605 
+Q 2195 2957 2003 3161 
+Q 1811 3366 1574 3366 
+Q 1165 3366 947 2953 
+Q 730 2541 730 1811 
+Q 730 1376 845 1014 
+Q 960 653 1152 438 
+Q 1344 224 1574 224 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-2013" d="M 0 1286 
+L 0 1600 
+L 3200 1600 
+L 3200 1286 
+L 0 1286 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-37" d="M 1210 -691 
+L 698 -480 
+L 2432 3283 
+L 326 3168 
+L 262 3597 
+L 2874 3597 
+L 2874 3302 
+L 1210 -691 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-2c" d="M 403 -909 
+L 326 -787 
+Q 512 -640 633 -435 
+Q 755 -230 755 -26 
+Q 621 -26 489 64 
+Q 358 154 358 326 
+Q 448 461 646 566 
+Q 845 672 1030 691 
+Q 1082 550 1101 422 
+Q 1120 294 1120 179 
+Q 1120 -218 909 -480 
+Q 698 -742 403 -909 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-32" d="M 358 0 
+L 358 307 
+Q 646 486 969 758 
+Q 1293 1030 1571 1350 
+Q 1850 1670 2026 1993 
+Q 2202 2317 2202 2605 
+Q 2202 2848 2080 3046 
+Q 1958 3245 1677 3354 
+Q 1472 3354 1187 3306 
+Q 902 3258 634 3174 
+L 506 3578 
+Q 602 3610 765 3638 
+Q 928 3667 1107 3689 
+Q 1286 3712 1421 3712 
+Q 1946 3712 2234 3549 
+Q 2522 3386 2640 3133 
+Q 2758 2880 2758 2611 
+Q 2758 2400 2633 2153 
+Q 2509 1907 2301 1651 
+Q 2093 1395 1843 1155 
+Q 1594 915 1347 713 
+Q 1101 512 896 371 
+L 896 333 
+L 2842 429 
+L 2842 0 
+L 358 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-36" d="M 1587 -77 
+Q 1139 -77 844 188 
+Q 550 454 403 902 
+Q 256 1350 256 1882 
+Q 256 2477 416 2931 
+Q 576 3386 838 3696 
+Q 1101 4006 1414 4163 
+Q 1728 4320 2029 4320 
+Q 2234 4320 2454 4275 
+Q 2675 4230 2810 4192 
+L 2682 3782 
+Q 2406 3872 2211 3920 
+Q 2016 3968 1760 3968 
+Q 1491 3866 1286 3581 
+Q 1082 3296 963 2886 
+Q 845 2477 826 2010 
+L 864 2010 
+Q 1043 2240 1276 2342 
+Q 1510 2445 1786 2445 
+Q 2118 2445 2377 2294 
+Q 2637 2144 2787 1872 
+Q 2938 1600 2938 1222 
+Q 2938 858 2813 608 
+Q 2688 358 2489 208 
+Q 2291 58 2054 -9 
+Q 1818 -77 1587 -77 
+z
+M 1581 205 
+Q 1792 205 1961 339 
+Q 2131 474 2230 698 
+Q 2330 922 2330 1197 
+Q 2330 1414 2269 1612 
+Q 2208 1811 2057 1955 
+Q 1907 2099 1645 2150 
+Q 1402 2125 1216 2035 
+Q 1030 1946 928 1853 
+Q 826 1760 826 1734 
+Q 826 1363 915 1011 
+Q 1005 659 1174 432 
+Q 1344 205 1581 205 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-4e"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(68.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(118.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(159.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-6d" transform="translate(206.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(284.499939 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(334.499924 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(381.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(413.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(438.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-30" transform="translate(488.199875 0)"/>
+     <use xlink:href="#Belleza-Regular-2013" transform="translate(538.19986 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(588.199844 0)"/>
+     <use xlink:href="#Belleza-Regular-37" transform="translate(638.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-2c" transform="translate(688.199814 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(711.699799 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(736.699783 0)"/>
+     <use xlink:href="#Belleza-Regular-30" transform="translate(786.699768 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(836.699753 0)"/>
+     <use xlink:href="#Belleza-Regular-36" transform="translate(886.699738 0)"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- Eight calendar days · Reported causes -->
+    <g style="fill: #50594e" transform="translate(21.6 135.378225) scale(0.1584 -0.1584)">
+     <defs>
+      <path id="Belleza-Regular-69" d="M 480 0 
+L 480 2893 
+L 1011 2893 
+L 1011 0 
+L 480 0 
+z
+M 742 3462 
+Q 602 3462 509 3564 
+Q 416 3667 416 3795 
+Q 416 3936 509 4032 
+Q 602 4128 742 4128 
+Q 877 4128 976 4032 
+Q 1075 3936 1075 3795 
+Q 1075 3667 976 3564 
+Q 877 3462 742 3462 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-63" d="M 1459 -77 
+Q 1101 -77 806 89 
+Q 512 256 339 576 
+Q 166 896 166 1357 
+Q 166 1850 348 2211 
+Q 531 2573 848 2771 
+Q 1165 2970 1562 2970 
+Q 1773 2970 1993 2909 
+Q 2214 2848 2323 2803 
+L 2259 2381 
+Q 1958 2541 1705 2608 
+Q 1453 2675 1293 2675 
+Q 1050 2554 912 2323 
+Q 774 2093 720 1846 
+Q 666 1600 666 1408 
+Q 666 1082 800 826 
+Q 934 570 1158 422 
+Q 1382 275 1651 275 
+Q 1875 275 2048 326 
+Q 2221 378 2362 448 
+L 2362 224 
+Q 2182 109 1955 16 
+Q 1728 -77 1459 -77 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-6c" d="M 480 0 
+L 480 4371 
+L 1018 4371 
+L 1018 0 
+L 480 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-6e" d="M 512 0 
+L 512 2010 
+Q 512 2234 451 2371 
+Q 390 2509 313 2589 
+Q 237 2669 186 2707 
+L 512 2950 
+L 1037 2483 
+Q 1274 2707 1482 2838 
+Q 1690 2970 1971 2970 
+Q 2118 2970 2294 2893 
+Q 2470 2816 2598 2608 
+Q 2726 2400 2726 2003 
+L 2726 0 
+L 2182 0 
+L 2182 1939 
+Q 2182 2240 2076 2403 
+Q 1971 2566 1690 2566 
+Q 1414 2566 1056 2208 
+L 1056 0 
+L 512 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-64" d="M 2714 -83 
+L 2189 384 
+Q 1952 166 1744 44 
+Q 1536 -77 1254 -77 
+Q 1114 -77 928 -16 
+Q 742 45 569 205 
+Q 397 365 281 669 
+Q 166 973 166 1453 
+Q 166 1702 236 1968 
+Q 307 2234 448 2461 
+Q 589 2688 803 2825 
+Q 1018 2963 1306 2963 
+Q 1491 2963 1708 2892 
+Q 1926 2822 2170 2669 
+L 2170 4371 
+L 2714 4371 
+L 2714 858 
+Q 2714 640 2774 499 
+Q 2835 358 2912 278 
+Q 2989 198 3040 154 
+L 2714 -83 
+z
+M 1299 211 
+Q 1549 230 1744 320 
+Q 1939 410 2054 506 
+Q 2170 602 2170 646 
+L 2170 2432 
+Q 1997 2547 1840 2601 
+Q 1683 2656 1549 2656 
+Q 1293 2656 1110 2493 
+Q 928 2330 829 2051 
+Q 730 1773 730 1427 
+Q 730 883 902 576 
+Q 1075 269 1299 211 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-79" d="M 32 -1408 
+L 122 -941 
+Q 480 -928 733 -781 
+Q 986 -634 1158 -413 
+Q 1331 -192 1440 32 
+L 141 2893 
+L 710 2893 
+L 1690 723 
+L 2445 2893 
+L 2688 2893 
+L 1594 -96 
+Q 1453 -480 1216 -774 
+Q 979 -1069 675 -1235 
+Q 371 -1402 32 -1408 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-b7" d="M 800 1274 
+Q 698 1274 573 1357 
+Q 448 1440 448 1619 
+Q 448 1773 553 1878 
+Q 659 1984 800 1984 
+Q 947 1984 1052 1875 
+Q 1158 1766 1158 1619 
+Q 1158 1440 1030 1357 
+Q 902 1274 800 1274 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-70" d="M 480 -1357 
+L 480 2029 
+Q 480 2253 419 2390 
+Q 358 2528 281 2608 
+Q 205 2688 147 2726 
+L 480 2970 
+L 1024 2483 
+Q 1261 2707 1469 2838 
+Q 1677 2970 1958 2970 
+Q 2106 2970 2288 2902 
+Q 2470 2835 2646 2665 
+Q 2822 2496 2934 2189 
+Q 3046 1882 3046 1402 
+Q 3046 1165 2972 902 
+Q 2899 640 2752 409 
+Q 2605 179 2387 35 
+Q 2170 -109 1882 -109 
+Q 1696 -109 1481 -38 
+Q 1267 32 1024 192 
+L 1024 -1357 
+L 480 -1357 
+z
+M 1709 198 
+Q 2067 205 2265 518 
+Q 2464 832 2464 1325 
+Q 2464 1875 2297 2233 
+Q 2131 2592 1894 2669 
+Q 1709 2650 1549 2566 
+Q 1389 2483 1270 2384 
+Q 1152 2285 1088 2201 
+Q 1024 2118 1024 2093 
+L 1024 378 
+Q 1402 198 1709 198 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-45"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(56.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(79.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(128.499969 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(178.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(211.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(236.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(277.299927 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(321.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(345.099915 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(391.999908 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(441.999893 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(491.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(536.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(568.19986 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(593.199844 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(643.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(687.599823 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(731.699814 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(768.899811 0)"/>
+     <use xlink:href="#Belleza-Regular-b7" transform="translate(793.899796 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(818.89978 0)"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(843.899765 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(907.699753 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(954.599747 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(1004.599731 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(1054.599716 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(1086.399704 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(1119.299698 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(1166.199692 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1216.199677 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(1241.199661 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(1281.799652 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(1326.199646 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1374.199631 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(1411.399628 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1458.299622 0)"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- 10 -->
+    <g style="fill: #191c1b" transform="translate(32.4 203.07645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-30" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- TUESDAY -->
+    <g style="fill: #50594e" transform="translate(79.2 200.599537) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-55" d="M 2067 -77 
+Q 1594 -77 1293 54 
+Q 992 186 822 387 
+Q 653 589 582 816 
+Q 512 1043 496 1241 
+Q 480 1440 480 1555 
+L 480 4237 
+L 1133 4237 
+L 1133 1504 
+Q 1133 1382 1142 1212 
+Q 1152 1043 1203 870 
+Q 1254 698 1372 544 
+Q 1491 390 1702 297 
+Q 1914 205 2246 205 
+Q 2797 205 3120 499 
+Q 3443 794 3443 1485 
+L 3443 4237 
+L 3725 4237 
+L 3725 1638 
+Q 3725 1485 3709 1267 
+Q 3693 1050 3619 816 
+Q 3546 582 3370 377 
+Q 3194 173 2880 48 
+Q 2566 -77 2067 -77 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-41" d="M 64 0 
+L 1965 4339 
+L 2061 4339 
+L 3962 0 
+L 3264 0 
+L 2784 1152 
+L 883 1152 
+L 410 0 
+L 64 0 
+z
+M 979 1395 
+L 2682 1395 
+L 1837 3469 
+L 979 1395 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-59" d="M 1574 0 
+L 1574 1574 
+L 128 4237 
+L 826 4237 
+L 2010 1805 
+L 3117 4237 
+L 3437 4237 
+L 2195 1606 
+L 2195 0 
+L 1574 0 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-54"/>
+     <use xlink:href="#Belleza-Regular-55" transform="translate(53.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(119.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-53" transform="translate(175.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(230.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(301.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(364.699951 0)"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <!-- Apple -->
+    <g style="fill: #191c1b" transform="translate(32.4 248.48865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-41"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(62.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(112.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(162.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(186.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- [11] -->
+    <g style="fill: #50594e" transform="translate(85.1625 244.519538) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-5b" d="M 1914 -998 
+L 563 -896 
+L 563 4134 
+L 1914 4237 
+L 1914 4070 
+L 1050 3891 
+L 1050 -653 
+L 1914 -838 
+L 1914 -998 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-5d" d="M 218 -998 
+L 218 -832 
+L 1082 -653 
+L 1082 3891 
+L 218 4077 
+L 218 4237 
+L 1568 4134 
+L 1568 -896 
+L 218 -998 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(83.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(133.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_9">
+    <!-- iCloud services failed. -->
+    <g style="fill: #50594e" transform="translate(32.4 278.693438) scale(0.18 -0.18)">
+     <defs>
+      <path id="Belleza-Regular-43" d="M 2528 -77 
+Q 2067 -77 1644 48 
+Q 1222 173 892 432 
+Q 563 691 371 1081 
+Q 179 1472 179 2003 
+Q 179 2618 400 3056 
+Q 621 3494 985 3772 
+Q 1350 4051 1785 4182 
+Q 2221 4314 2643 4314 
+Q 2842 4314 3059 4282 
+Q 3277 4250 3462 4205 
+Q 3648 4160 3750 4122 
+L 3686 3686 
+Q 3341 3834 3005 3942 
+Q 2669 4051 2253 4051 
+Q 1574 3898 1216 3382 
+Q 858 2867 858 2106 
+Q 858 1466 1091 1027 
+Q 1325 589 1728 368 
+Q 2131 147 2650 147 
+Q 2989 147 3321 233 
+Q 3654 320 3853 493 
+L 3853 141 
+Q 3661 64 3424 16 
+Q 3187 -32 2953 -54 
+Q 2720 -77 2528 -77 
+z
+" transform="scale(0.015625)"/>
+      <path id="Belleza-Regular-2e" d="M 800 -70 
+Q 653 -70 550 32 
+Q 448 134 448 282 
+Q 448 429 550 534 
+Q 653 640 800 640 
+Q 947 640 1052 534 
+Q 1158 429 1158 282 
+Q 1158 134 1052 32 
+Q 947 -70 800 -70 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-69"/>
+     <use xlink:href="#Belleza-Regular-43" transform="translate(23.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(86.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(109.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(159.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(207.899948 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(257.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(282.899918 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(320.099915 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(366.999908 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(398.799896 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(440.299881 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(463.599869 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(504.19986 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(551.099854 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(588.29985 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(613.299835 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(646.599823 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(690.999817 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(714.299805 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(737.699799 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(784.599792 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(834.599777 0)"/>
+    </g>
+    <!-- Cause not disclosed. -->
+    <g style="fill: #50594e" transform="translate(32.4 297.507994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-43"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(63.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(107.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(155.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(192.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(239.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(264.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(314.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(364.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(397.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(422.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(472.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(495.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(533.099869 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(573.69986 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(597.099854 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(647.099838 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(684.299835 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(731.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(781.199814 0)"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- 11 -->
+    <g style="fill: #191c1b" transform="translate(241.2 203.07645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_11">
+    <!-- WEDNESDAY -->
+    <g style="fill: #50594e" transform="translate(288 200.599537) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-57"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(85.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(141.799988 0)"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(212.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(280.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-53" transform="translate(337.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(392.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(463.499939 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(526.399933 0)"/>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- No new outage start -->
+    <g style="fill: #50594e" transform="translate(241.2 253.313437) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-4e"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(68.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(118.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(143.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(193.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(240.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(308.59993 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(333.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(383.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(431.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(464.499878 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(508.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(557.899857 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(604.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(629.799835 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(666.999832 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(699.899826 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(744.29982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(776.099808 0)"/>
+    </g>
+    <!-- in the essay. -->
+    <g style="fill: #50594e" transform="translate(241.2 272.307994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-69"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(23.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(73.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(98.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(131.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(181.499939 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(228.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(253.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(300.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(337.499908 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(374.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(419.099899 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(463.19989 0)"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <!-- 12 -->
+    <g style="fill: #191c1b" transform="translate(32.4 479.55645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- THURSDAY -->
+    <g style="fill: #50594e" transform="translate(79.2 477.079538) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-48" d="M 576 0 
+L 576 4237 
+L 1197 4237 
+L 1197 2342 
+L 3136 2342 
+L 3136 4237 
+L 3757 4237 
+L 3757 0 
+L 3136 0 
+L 3136 2099 
+L 1197 2099 
+L 1197 0 
+L 576 0 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-54"/>
+     <use xlink:href="#Belleza-Regular-48" transform="translate(53.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-55" transform="translate(121.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(186.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-53" transform="translate(250.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(306.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(377.09993 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(439.999924 0)"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- Microsoft -->
+    <g style="fill: #191c1b" transform="translate(32.4 524.96865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-4d"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(88.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(112.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(152.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(184.59996 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(234.599945 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(271.799942 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(321.799927 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(355.099915 0)"/>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- [2] -->
+    <g style="fill: #50594e" transform="translate(116.40375 520.999538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(83.299973 0)"/>
+    </g>
+   </g>
+   <g id="text_17">
+    <!-- Hidden July bug. -->
+    <g style="fill: #50594e" transform="translate(32.4 555.173438) scale(0.18 -0.18)">
+     <defs>
+      <path id="Belleza-Regular-4a" d="M -269 -1434 
+Q -410 -1434 -592 -1408 
+Q -774 -1382 -909 -1344 
+L -845 -845 
+Q -730 -922 -570 -986 
+Q -410 -1050 -240 -1091 
+Q -70 -1133 58 -1133 
+Q 205 -1043 320 -832 
+Q 435 -621 505 -333 
+Q 576 -45 576 262 
+L 576 4237 
+L 1210 4237 
+L 1210 262 
+Q 1210 -205 1011 -589 
+Q 813 -973 480 -1203 
+Q 147 -1434 -269 -1434 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-48"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(67.699982 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(90.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(140.999954 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(190.999939 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(237.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(287.899918 0)"/>
+     <use xlink:href="#Belleza-Regular-4a" transform="translate(312.899902 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(340.799896 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(388.799881 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(412.199875 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(456.299866 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(481.29985 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(531.299835 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(579.29982 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(628.299805 0)"/>
+    </g>
+    <!-- Requests shifted while -->
+    <g style="fill: #50594e" transform="translate(32.4 574.403569) scale(0.18 -0.18)">
+     <defs>
+      <path id="Belleza-Regular-71" d="M 2182 -1357 
+L 2182 358 
+Q 1971 122 1724 6 
+Q 1478 -109 1235 -109 
+Q 947 -109 697 57 
+Q 448 224 294 557 
+Q 141 890 141 1389 
+Q 141 1830 333 2188 
+Q 525 2547 851 2758 
+Q 1178 2970 1568 2970 
+Q 1965 2970 2374 2707 
+L 2720 2957 
+L 2720 -1357 
+L 2182 -1357 
+z
+M 1306 186 
+Q 1555 205 1753 307 
+Q 1952 410 2067 518 
+Q 2182 627 2182 672 
+L 2182 2528 
+Q 2157 2547 1984 2595 
+Q 1811 2643 1587 2643 
+Q 1190 2643 940 2326 
+Q 691 2010 691 1491 
+Q 691 928 860 592 
+Q 1030 256 1306 186 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-52"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(63.799988 0)"/>
+     <use xlink:href="#Belleza-Regular-71" transform="translate(110.699982 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(160.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(208.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(255.599945 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(292.799942 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(325.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(362.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(387.899918 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(425.099915 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(475.399902 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(498.69989 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(531.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(564.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(611.799866 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(661.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(686.799835 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(755.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(805.499817 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(828.799805 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(852.199799 0)"/>
+    </g>
+    <!-- capacity was reduced. -->
+    <g style="fill: #50594e" transform="translate(32.4 593.218125) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-63"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(40.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(84.999985 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(134.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(179.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(219.999954 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(243.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(276.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(320.299927 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(345.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(413.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(458.099899 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(495.299896 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(520.299881 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(552.099869 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(598.999863 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(648.999847 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(696.999832 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(737.599823 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(784.499817 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(834.499802 0)"/>
+    </g>
+   </g>
+   <g id="text_18">
+    <!-- Continued into Nov. 13. -->
+    <g style="fill: #50594e" transform="translate(32.4 638.298225) scale(0.1584 -0.1584)">
+     <defs>
+      <path id="Belleza-Regular-33" d="M 1242 -691 
+Q 870 -691 566 -620 
+Q 262 -550 128 -506 
+L 256 -96 
+Q 486 -205 684 -288 
+Q 883 -371 1152 -422 
+Q 1408 -422 1632 -313 
+Q 1856 -205 1993 9 
+Q 2131 224 2131 538 
+Q 2131 781 2000 1001 
+Q 1869 1222 1571 1363 
+Q 1274 1504 762 1504 
+L 755 1677 
+Q 1222 1709 1481 1840 
+Q 1741 1971 1846 2172 
+Q 1952 2374 1952 2598 
+Q 1952 2669 1920 2809 
+Q 1888 2950 1769 3100 
+Q 1651 3251 1382 3354 
+Q 1178 3354 922 3306 
+Q 666 3258 397 3174 
+L 269 3578 
+Q 365 3610 515 3638 
+Q 666 3667 829 3689 
+Q 992 3712 1126 3712 
+Q 1530 3712 1846 3587 
+Q 2163 3462 2348 3222 
+Q 2534 2982 2534 2630 
+Q 2534 2298 2291 2035 
+Q 2048 1773 1645 1632 
+Q 2202 1517 2477 1225 
+Q 2752 934 2752 589 
+Q 2752 262 2614 19 
+Q 2477 -224 2253 -381 
+Q 2029 -538 1763 -614 
+Q 1498 -691 1242 -691 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-43"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(63.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(113.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(163.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(196.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(219.399948 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(269.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(317.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(364.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(414.299896 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(439.299881 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(462.599869 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(512.599854 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(545.499847 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(595.499832 0)"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(620.499817 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(688.799805 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(738.799789 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(780.299774 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(805.299759 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(830.299744 0)"/>
+     <use xlink:href="#Belleza-Regular-33" transform="translate(880.299728 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(930.299713 0)"/>
+    </g>
+   </g>
+   <g id="text_19">
+    <!-- 13 -->
+    <g style="fill: #191c1b" transform="translate(241.2 479.55645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-33" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- FRIDAY -->
+    <g style="fill: #50594e" transform="translate(288 477.079538) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-46" d="M 576 0 
+L 576 4237 
+L 3078 4237 
+L 3078 3808 
+L 1894 4006 
+Q 1702 4006 1542 3977 
+Q 1382 3949 1197 3898 
+L 1197 2342 
+L 2554 2342 
+L 2554 2099 
+L 1197 2099 
+L 1197 0 
+L 576 0 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-46"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(48.099991 0)"/>
+     <use xlink:href="#Belleza-Regular-49" transform="translate(111.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(139.099976 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(209.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(272.799957 0)"/>
+    </g>
+   </g>
+   <g id="text_21">
+    <!-- FAA -->
+    <g style="fill: #191c1b" transform="translate(241.2 524.96865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-46"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(48.099991 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(110.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <!-- [3] -->
+    <g style="fill: #50594e" transform="translate(280.00125 520.999538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-33" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(83.299973 0)"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <!-- Network equipment -->
+    <g style="fill: #50594e" transform="translate(241.2 555.173438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-4e"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(68.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(115.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(148.099976 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(216.499969 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(266.499954 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(298.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(347.59993 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(372.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-71" transform="translate(419.499908 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(469.499893 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(517.499878 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(540.799866 0)"/>
+     <use xlink:href="#Belleza-Regular-6d" transform="translate(590.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(668.599838 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(715.499832 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(765.499817 0)"/>
+    </g>
+    <!-- suspected; inquiry open. -->
+    <g style="fill: #50594e" transform="translate(241.2 573.987994) scale(0.18 -0.18)">
+     <defs>
+      <path id="Belleza-Regular-3b" d="M 672 2227 
+Q 525 2227 422 2329 
+Q 320 2432 320 2579 
+Q 320 2726 422 2832 
+Q 525 2938 672 2938 
+Q 819 2938 924 2832 
+Q 1030 2726 1030 2579 
+Q 1030 2432 924 2329 
+Q 819 2227 672 2227 
+z
+M 365 -909 
+L 288 -787 
+Q 474 -640 595 -435 
+Q 717 -230 717 -26 
+Q 582 -26 451 64 
+Q 320 154 320 326 
+Q 410 461 608 566 
+Q 806 672 992 691 
+Q 1043 550 1062 422 
+Q 1082 294 1082 179 
+Q 1082 -218 870 -480 
+Q 659 -742 365 -909 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-73"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(37.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(85.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(122.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(172.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(219.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(259.899948 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(292.799942 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(339.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-3b" transform="translate(389.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(410.799911 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(435.799896 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(459.099884 0)"/>
+     <use xlink:href="#Belleza-Regular-71" transform="translate(509.099869 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(559.099854 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(607.099838 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(630.399826 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(662.199814 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(706.299805 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(731.299789 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(781.299774 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(831.299759 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(878.199753 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(928.199738 0)"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- Workday -->
+    <g style="fill: #191c1b" transform="translate(241.2 625.04865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-57"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(85.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(135.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(167.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(216.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(266.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(311.09993 0)"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <!-- [7][8] -->
+    <g style="fill: #50594e" transform="translate(318.16125 621.079538) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-38" d="M 1574 -77 
+Q 1178 -77 906 76 
+Q 634 230 496 464 
+Q 358 698 358 947 
+Q 358 1229 448 1411 
+Q 538 1594 723 1757 
+Q 909 1920 1190 2138 
+Q 922 2374 746 2550 
+Q 570 2726 483 2908 
+Q 397 3091 397 3347 
+Q 397 3674 582 3888 
+Q 768 4102 1043 4211 
+Q 1318 4320 1594 4320 
+Q 2138 4320 2426 4057 
+Q 2714 3795 2714 3430 
+Q 2714 3136 2573 2937 
+Q 2432 2739 2230 2611 
+Q 2029 2483 1856 2387 
+Q 2285 2080 2496 1840 
+Q 2707 1600 2777 1395 
+Q 2848 1190 2848 973 
+Q 2848 851 2797 672 
+Q 2746 493 2611 323 
+Q 2477 154 2224 38 
+Q 1971 -77 1574 -77 
+z
+M 1651 2483 
+Q 1760 2566 1888 2704 
+Q 2016 2842 2109 3034 
+Q 2202 3226 2202 3456 
+Q 2202 3699 2010 3872 
+Q 1818 4045 1542 4045 
+Q 1286 4045 1107 3888 
+Q 928 3731 928 3507 
+Q 928 3251 1065 3049 
+Q 1203 2848 1376 2704 
+Q 1549 2560 1651 2483 
+z
+M 1651 205 
+Q 1920 205 2109 384 
+Q 2298 563 2298 819 
+Q 2298 1056 2208 1225 
+Q 2118 1395 1916 1571 
+Q 1715 1747 1376 2010 
+Q 1286 1926 1174 1779 
+Q 1062 1632 985 1437 
+Q 909 1242 909 1011 
+Q 909 787 1008 604 
+Q 1107 422 1276 313 
+Q 1446 205 1651 205 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-37" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(83.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-5b" transform="translate(116.59996 0)"/>
+     <use xlink:href="#Belleza-Regular-38" transform="translate(149.899948 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(199.899933 0)"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- Backup check reached -->
+    <g style="fill: #50594e" transform="translate(241.2 655.253438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-42"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(64.399994 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(108.799988 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(149.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(198.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(246.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(296.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(321.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(362.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(412.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(459.499893 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(500.099884 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(549.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(574.399857 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(606.199844 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(653.099838 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(697.499832 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(738.099823 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(788.399811 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(835.299805 0)"/>
+    </g>
+    <!-- live records. -->
+    <g style="fill: #50594e" transform="translate(241.2 674.067994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-6c"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(23.399994 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(46.699982 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(88.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(135.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(160.099945 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(191.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(238.799927 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(279.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(329.399902 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(361.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(411.199875 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(448.399872 0)"/>
+    </g>
+   </g>
+   <g id="text_27">
+    <!-- 14 -->
+    <g style="fill: #191c1b" transform="translate(32.4 756.03645) scale(0.3168 -0.3168)">
+     <defs>
+      <path id="Belleza-Regular-34" d="M 1830 -640 
+L 1830 442 
+L -6 442 
+L -6 717 
+L 1830 3597 
+L 2368 3597 
+L 2368 845 
+L 3098 845 
+L 3098 442 
+L 2368 442 
+L 2368 -640 
+L 1830 -640 
+z
+M 365 845 
+L 1830 845 
+L 1830 3194 
+L 365 845 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-34" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <!-- SATURDAY -->
+    <g style="fill: #50594e" transform="translate(79.2 753.559538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-53"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(55.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-54" transform="translate(118.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-55" transform="translate(171.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-52" transform="translate(237.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(301.499954 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(372.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(435.199936 0)"/>
+    </g>
+   </g>
+   <g id="text_29">
+    <!-- Workday -->
+    <g style="fill: #191c1b" transform="translate(32.4 801.44865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-57"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(85.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(135.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(167.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(216.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(266.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(311.09993 0)"/>
+    </g>
+   </g>
+   <g id="text_30">
+    <!-- [8] -->
+    <g style="fill: #50594e" transform="translate(109.36125 797.479538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-38" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(83.299973 0)"/>
+    </g>
+   </g>
+   <g id="text_31">
+    <!-- Restoration continued -->
+    <g style="fill: #50594e" transform="translate(32.4 831.653438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-52"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(63.799988 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(110.699982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(147.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(180.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(230.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(262.599945 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(306.999939 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(339.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(363.199921 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(413.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(463.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(488.199875 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(528.799866 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(578.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(628.799835 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(661.699829 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(684.999817 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(734.999802 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(782.999786 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(829.89978 0)"/>
+    </g>
+    <!-- into the morning. -->
+    <g style="fill: #50594e" transform="translate(32.4 850.467994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-69"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(23.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(73.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(106.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(156.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(181.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(214.09993 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(264.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(311.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-6d" transform="translate(336.299896 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(414.099884 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(464.099869 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(495.899857 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(545.899841 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(569.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(619.199814 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(668.199799 0)"/>
+    </g>
+   </g>
+   <g id="text_32">
+    <!-- Continuation, not -->
+    <g style="fill: #50594e" transform="translate(32.4 892.818225) scale(0.1584 -0.1584)">
+     <use xlink:href="#Belleza-Regular-43"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(63.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(113.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(163.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(196.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(219.399948 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(269.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(317.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(361.799911 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(394.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(417.999893 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(467.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-2c" transform="translate(517.999863 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(541.499847 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(566.499832 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(616.499817 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(666.499802 0)"/>
+    </g>
+    <!-- a new outage. -->
+    <g style="fill: #50594e" transform="translate(32.4 909.375035) scale(0.1584 -0.1584)">
+     <use xlink:href="#Belleza-Regular-61"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(44.399994 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(69.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(119.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(166.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(234.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(259.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(309.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(357.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(390.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(434.999893 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(483.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(530.899872 0)"/>
+    </g>
+   </g>
+   <g id="text_33">
+    <!-- 15 -->
+    <g style="fill: #191c1b" transform="translate(241.2 756.03645) scale(0.3168 -0.3168)">
+     <defs>
+      <path id="Belleza-Regular-35" d="M 1242 -691 
+Q 774 -691 518 -636 
+Q 262 -582 128 -538 
+L 256 -128 
+Q 486 -237 684 -304 
+Q 883 -371 1152 -422 
+Q 1408 -422 1625 -329 
+Q 1843 -237 1977 -41 
+Q 2112 154 2112 467 
+Q 2112 704 1974 944 
+Q 1837 1184 1510 1347 
+Q 1184 1510 608 1510 
+L 416 1510 
+L 518 3597 
+L 2637 3597 
+L 2573 3168 
+L 1018 3264 
+L 941 1670 
+Q 1562 1645 1955 1469 
+Q 2349 1293 2537 1030 
+Q 2726 768 2726 467 
+Q 2726 141 2576 -83 
+Q 2426 -307 2192 -441 
+Q 1958 -576 1705 -633 
+Q 1453 -691 1242 -691 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-35" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_34">
+    <!-- SUNDAY -->
+    <g style="fill: #50594e" transform="translate(288 753.559538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-53"/>
+     <use xlink:href="#Belleza-Regular-55" transform="translate(55.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(121.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(189.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(260.399963 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(323.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_35">
+    <!-- No new outage start -->
+    <g style="fill: #50594e" transform="translate(241.2 806.273438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-4e"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(68.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(118.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(143.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(193.299942 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(240.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(308.59993 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(333.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(383.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(431.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(464.499878 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(508.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(557.899857 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(604.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(629.799835 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(666.999832 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(699.899826 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(744.29982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(776.099808 0)"/>
+    </g>
+    <!-- in the essay. -->
+    <g style="fill: #50594e" transform="translate(241.2 825.267994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-69"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(23.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(73.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(98.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(131.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(181.499939 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(228.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(253.399918 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(300.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(337.499908 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(374.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(419.099899 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(463.19989 0)"/>
+    </g>
+   </g>
+   <g id="text_36">
+    <!-- 16 -->
+    <g style="fill: #191c1b" transform="translate(32.4 1032.51645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-36" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_37">
+    <!-- MONDAY -->
+    <g style="fill: #50594e" transform="translate(79.2 1030.039538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-4d"/>
+     <use xlink:href="#Belleza-Regular-4f" transform="translate(88.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(161.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(229.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(300.499954 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(363.399948 0)"/>
+    </g>
+   </g>
+   <g id="text_38">
+    <!-- Chase -->
+    <g style="fill: #191c1b" transform="translate(32.4 1077.92865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-43"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(63.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(113.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(157.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(195.099976 0)"/>
+    </g>
+   </g>
+   <g id="text_39">
+    <!-- [9] -->
+    <g style="fill: #50594e" transform="translate(86.95125 1073.959538) scale(0.1224 -0.1224)">
+     <defs>
+      <path id="Belleza-Regular-39" d="M 1120 -685 
+Q 986 -685 822 -659 
+Q 659 -634 512 -598 
+Q 365 -563 275 -538 
+L 403 -128 
+Q 678 -211 905 -272 
+Q 1133 -333 1389 -333 
+Q 1658 -230 1862 58 
+Q 2067 346 2188 752 
+Q 2310 1158 2323 1626 
+L 2285 1626 
+Q 2106 1395 1872 1292 
+Q 1638 1190 1363 1190 
+Q 1037 1190 774 1340 
+Q 512 1491 361 1766 
+Q 211 2042 211 2413 
+Q 211 2778 336 3027 
+Q 461 3277 659 3427 
+Q 858 3578 1094 3645 
+Q 1331 3712 1562 3712 
+Q 2010 3712 2304 3446 
+Q 2598 3181 2745 2736 
+Q 2893 2291 2893 1754 
+Q 2893 1158 2733 704 
+Q 2573 250 2310 -60 
+Q 2048 -371 1734 -528 
+Q 1421 -685 1120 -685 
+z
+M 1504 1485 
+Q 1754 1510 1936 1603 
+Q 2118 1696 2220 1785 
+Q 2323 1875 2323 1901 
+Q 2323 2278 2233 2627 
+Q 2144 2976 1977 3203 
+Q 1811 3430 1568 3430 
+Q 1363 3430 1190 3296 
+Q 1018 3162 918 2938 
+Q 819 2714 819 2438 
+Q 819 2221 880 2022 
+Q 941 1824 1091 1680 
+Q 1242 1536 1504 1485 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-39" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(83.299973 0)"/>
+    </g>
+   </g>
+   <g id="text_40">
+    <!-- Software bug slowed -->
+    <g style="fill: #50594e" transform="translate(32.4 1108.296563) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-53"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(55.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(105.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(138.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(171.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(240.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(284.599945 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(316.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(363.299927 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(388.299911 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(438.299896 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(486.299881 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(535.299866 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(560.29985 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(597.499847 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(620.899841 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(670.899826 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(739.29982 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(786.199814 0)"/>
+    </g>
+    <!-- payments. -->
+    <g style="fill: #50594e" transform="translate(32.4 1127.291119) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-70"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(49.999985 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(94.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-6d" transform="translate(138.499969 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(216.299957 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(263.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(313.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(346.09993 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(383.299927 0)"/>
+    </g>
+   </g>
+   <g id="text_41">
+    <!-- United -->
+    <g style="fill: #191c1b" transform="translate(32.4 1178.00865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-55"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(65.699997 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(115.699982 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(138.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(171.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(218.799957 0)"/>
+    </g>
+   </g>
+   <g id="text_42">
+    <!-- [10] -->
+    <g style="fill: #50594e" transform="translate(92.35125 1174.039538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-30" transform="translate(83.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(133.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_43">
+    <!-- Takeoff data unavailable. -->
+    <g style="fill: #50594e" transform="translate(32.4 1208.213438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-54"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(53.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-6b" transform="translate(97.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(147.199966 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(194.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(244.099945 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(277.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(310.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(335.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(385.69989 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(430.099884 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(462.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(507.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(532.399857 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(580.399841 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(630.399826 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(674.79982 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(716.299805 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(760.699799 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(783.999786 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(807.39978 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(851.799774 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(901.799759 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(925.199753 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(972.099747 0)"/>
+    </g>
+    <!-- Cause not disclosed. -->
+    <g style="fill: #50594e" transform="translate(32.4 1227.027994) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-43"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(63.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(107.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(155.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(192.799973 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(239.699966 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(264.699951 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(314.699936 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(364.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(397.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(422.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(472.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(495.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(533.099869 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(573.69986 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(597.099854 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(647.099838 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(684.299835 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(731.199829 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(781.199814 0)"/>
+    </g>
+   </g>
+   <g id="text_44">
+    <!-- 17 -->
+    <g style="fill: #191c1b" transform="translate(241.2 1032.51645) scale(0.3168 -0.3168)">
+     <use xlink:href="#Belleza-Regular-31"/>
+     <use xlink:href="#Belleza-Regular-37" transform="translate(49.999985 0)"/>
+    </g>
+   </g>
+   <g id="text_45">
+    <!-- TUESDAY -->
+    <g style="fill: #50594e" transform="translate(288 1030.039538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-54"/>
+     <use xlink:href="#Belleza-Regular-55" transform="translate(53.499985 0)"/>
+     <use xlink:href="#Belleza-Regular-45" transform="translate(119.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-53" transform="translate(175.399979 0)"/>
+     <use xlink:href="#Belleza-Regular-44" transform="translate(230.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-41" transform="translate(301.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-59" transform="translate(364.699951 0)"/>
+    </g>
+   </g>
+   <g id="text_46">
+    <!-- Apple -->
+    <g style="fill: #191c1b" transform="translate(241.2 1077.92865) scale(0.2016 -0.2016)">
+     <use xlink:href="#Belleza-Regular-41"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(62.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(112.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(162.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(186.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_47">
+    <!-- [12] -->
+    <g style="fill: #50594e" transform="translate(293.9625 1073.959538) scale(0.1224 -0.1224)">
+     <use xlink:href="#Belleza-Regular-5b"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(33.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(83.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(133.299957 0)"/>
+    </g>
+   </g>
+   <g id="text_48">
+    <!-- Internal update. -->
+    <g style="fill: #50594e" transform="translate(241.2 1108.133438) scale(0.18 -0.18)">
+     <use xlink:href="#Belleza-Regular-49"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(27.199997 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(77.199982 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(110.099976 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(156.999969 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(188.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(238.799942 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(283.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(306.59993 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(331.599915 0)"/>
+     <use xlink:href="#Belleza-Regular-70" transform="translate(379.599899 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(429.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(479.599869 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(523.999863 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(556.899857 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(603.79985 0)"/>
+    </g>
+   </g>
+   <g id="text_49">
+    <!-- A new outage began. -->
+    <g style="fill: #191c1b" transform="translate(50.4 1304.9217) scale(0.1728 -0.1728)">
+     <use xlink:href="#Belleza-Regular-41"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(62.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(87.899979 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(137.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(184.799957 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(253.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(278.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(328.199921 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(376.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(409.099899 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(453.499893 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(502.499878 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(549.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(574.399857 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(624.399841 0)"/>
+     <use xlink:href="#Belleza-Regular-67" transform="translate(671.299835 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(720.29982 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(764.699814 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(814.699799 0)"/>
+    </g>
+   </g>
+   <g id="text_50">
+    <!-- Sources: essay references [2], [3], [7]–[12]. -->
+    <g style="fill: #50594e" transform="translate(21.6 1343.681775) scale(0.1584 -0.1584)">
+     <defs>
+      <path id="Belleza-Regular-3a" d="M 672 2227 
+Q 525 2227 422 2329 
+Q 320 2432 320 2579 
+Q 320 2726 422 2832 
+Q 525 2938 672 2938 
+Q 819 2938 924 2832 
+Q 1030 2726 1030 2579 
+Q 1030 2432 924 2329 
+Q 819 2227 672 2227 
+z
+M 672 -70 
+Q 525 -70 422 32 
+Q 320 134 320 282 
+Q 320 429 422 534 
+Q 525 640 672 640 
+Q 819 640 924 534 
+Q 1030 429 1030 282 
+Q 1030 134 924 32 
+Q 819 -70 672 -70 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-53"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(55.599991 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(105.599976 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(153.59996 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(185.399948 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(225.999939 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(272.899933 0)"/>
+     <use xlink:href="#Belleza-Regular-3a" transform="translate(310.09993 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(331.199921 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(356.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(403.099899 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(440.299896 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(477.499893 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(521.899887 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(565.999878 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(590.999863 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(622.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(669.699844 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(702.999832 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(749.899826 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(781.699814 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(828.599808 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(878.599792 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(919.199783 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(966.099777 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1003.299774 0)"/>
+     <use xlink:href="#Belleza-Regular-5b" transform="translate(1028.299759 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(1061.599747 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(1111.599731 0)"/>
+     <use xlink:href="#Belleza-Regular-2c" transform="translate(1144.899719 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1168.399704 0)"/>
+     <use xlink:href="#Belleza-Regular-5b" transform="translate(1193.399689 0)"/>
+     <use xlink:href="#Belleza-Regular-33" transform="translate(1226.699677 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(1276.699661 0)"/>
+     <use xlink:href="#Belleza-Regular-2c" transform="translate(1309.999649 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1333.499634 0)"/>
+     <use xlink:href="#Belleza-Regular-5b" transform="translate(1358.499619 0)"/>
+     <use xlink:href="#Belleza-Regular-37" transform="translate(1391.799606 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(1441.799591 0)"/>
+     <use xlink:href="#Belleza-Regular-2013" transform="translate(1475.099579 0)"/>
+     <use xlink:href="#Belleza-Regular-5b" transform="translate(1525.099564 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(1558.399551 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(1608.399536 0)"/>
+     <use xlink:href="#Belleza-Regular-5d" transform="translate(1658.399521 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(1691.699509 0)"/>
+    </g>
+   </g>
+   <g id="text_51">
+    <!-- As of November 17, 2026. Only the essay’s -->
+    <g style="fill: #50594e" transform="translate(21.6 1369.601775) scale(0.1584 -0.1584)">
+     <defs>
+      <path id="Belleza-Regular-2019" d="M 397 2733 
+L 320 2854 
+Q 506 3002 627 3206 
+Q 749 3411 749 3616 
+Q 614 3616 483 3705 
+Q 352 3795 352 3968 
+Q 442 4102 640 4208 
+Q 838 4314 1024 4333 
+Q 1075 4192 1094 4064 
+Q 1114 3936 1114 3821 
+Q 1114 3424 902 3161 
+Q 691 2899 397 2733 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Belleza-Regular-41"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(62.899994 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(100.099991 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(125.099976 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(175.09996 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(208.399948 0)"/>
+     <use xlink:href="#Belleza-Regular-4e" transform="translate(233.399933 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(301.699921 0)"/>
+     <use xlink:href="#Belleza-Regular-76" transform="translate(351.699905 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(393.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-6d" transform="translate(440.099884 0)"/>
+     <use xlink:href="#Belleza-Regular-62" transform="translate(517.899872 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(567.899857 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(614.79985 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(646.599838 0)"/>
+     <use xlink:href="#Belleza-Regular-31" transform="translate(671.599823 0)"/>
+     <use xlink:href="#Belleza-Regular-37" transform="translate(721.599808 0)"/>
+     <use xlink:href="#Belleza-Regular-2c" transform="translate(771.599792 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(795.099777 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(820.099762 0)"/>
+     <use xlink:href="#Belleza-Regular-30" transform="translate(870.099747 0)"/>
+     <use xlink:href="#Belleza-Regular-32" transform="translate(920.099731 0)"/>
+     <use xlink:href="#Belleza-Regular-36" transform="translate(970.099716 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(1020.099701 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1045.099686 0)"/>
+     <use xlink:href="#Belleza-Regular-4f" transform="translate(1070.09967 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(1142.599655 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(1192.59964 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(1215.999634 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1260.099625 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(1285.099609 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(1317.999603 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(1368.299591 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1415.199585 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(1440.19957 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1487.099564 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1524.299561 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(1561.499557 0)"/>
+     <use xlink:href="#Belleza-Regular-79" transform="translate(1605.899551 0)"/>
+     <use xlink:href="#Belleza-Regular-2019" transform="translate(1649.999542 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1672.399536 0)"/>
+    </g>
+    <!-- incidents are shown; this is not a full census. -->
+    <g style="fill: #50594e" transform="translate(21.6 1386.28481) scale(0.1584 -0.1584)">
+     <use xlink:href="#Belleza-Regular-69"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(23.299988 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(73.299973 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(113.899963 0)"/>
+     <use xlink:href="#Belleza-Regular-64" transform="translate(137.199951 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(187.199936 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(234.09993 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(284.099915 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(316.999908 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(354.199905 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(379.19989 0)"/>
+     <use xlink:href="#Belleza-Regular-72" transform="translate(423.599884 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(455.399872 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(502.299866 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(527.29985 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(564.499847 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(614.799835 0)"/>
+     <use xlink:href="#Belleza-Regular-77" transform="translate(664.79982 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(733.199814 0)"/>
+     <use xlink:href="#Belleza-Regular-3b" transform="translate(783.199799 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(804.299789 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(829.299774 0)"/>
+     <use xlink:href="#Belleza-Regular-68" transform="translate(862.199768 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(912.499756 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(935.799744 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(972.999741 0)"/>
+     <use xlink:href="#Belleza-Regular-69" transform="translate(997.999725 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1021.299713 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1058.49971 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(1083.499695 0)"/>
+     <use xlink:href="#Belleza-Regular-6f" transform="translate(1133.49968 0)"/>
+     <use xlink:href="#Belleza-Regular-74" transform="translate(1183.499664 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1216.399658 0)"/>
+     <use xlink:href="#Belleza-Regular-61" transform="translate(1241.399643 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1285.799637 0)"/>
+     <use xlink:href="#Belleza-Regular-66" transform="translate(1310.799622 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(1344.099609 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(1392.099594 0)"/>
+     <use xlink:href="#Belleza-Regular-6c" transform="translate(1415.499588 0)"/>
+     <use xlink:href="#Belleza-Regular-20" transform="translate(1438.899582 0)"/>
+     <use xlink:href="#Belleza-Regular-63" transform="translate(1463.899567 0)"/>
+     <use xlink:href="#Belleza-Regular-65" transform="translate(1504.499557 0)"/>
+     <use xlink:href="#Belleza-Regular-6e" transform="translate(1551.399551 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1601.399536 0)"/>
+     <use xlink:href="#Belleza-Regular-75" transform="translate(1638.599533 0)"/>
+     <use xlink:href="#Belleza-Regular-73" transform="translate(1686.599518 0)"/>
+     <use xlink:href="#Belleza-Regular-2e" transform="translate(1723.799515 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p715fac618e">
+   <rect x="0" y="0" width="460.8" height="1411.2"/>
+  </clipPath>
+ </defs>
+</svg>

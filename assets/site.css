@@ -50,3 +50,10 @@
 .feature--full-art{min-height:0}
 .feature--full-art .feature-art,.feature--full-art .feature-art .cover{min-height:0;height:auto;aspect-ratio:3/2}
 .feature--full-art .feature-art img{transform:none}
+/* Exact-data illustrations for the outage essay. Narrow versions preserve readable labels. */
+.essay-page--outages .outage-figure picture{display:block}
+.essay-page--outages .outage-figure img{display:block;width:100%;height:auto}
+.essay-page--outages .outage-figure figcaption{max-width:780px;margin:14px auto 0;font-size:15px;line-height:1.5}
+.essay-page--outages .outage-figure .citation{white-space:nowrap}
+.essay-page--outages .essay-references{font-size:17px;line-height:1.6}
+@media(max-width:640px){.essay-page--outages .outage-figure{margin-inline:-12px}.essay-page--outages .outage-figure figcaption{padding-inline:12px;text-align:left}}
