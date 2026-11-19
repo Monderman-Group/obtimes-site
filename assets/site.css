@@ -86,3 +86,12 @@
 @media(max-width:560px){.essay-share-dialog{padding:24px 20px 22px}.essay-share-heading h2{font-size:27px}.essay-share-article{font-size:18px}.essay-share-option{gap:9px;padding:11px 12px;font-size:15px}.essay-share-copy{padding-inline:12px}.essay-share-copy-row input{font-size:16px}}
 @media(max-width:360px){.essay-share-dialog{padding-inline:16px;max-width:calc(100% - 20px)}.essay-share-option{font-size:14px;padding-inline:9px;gap:7px}.essay-share-copy-row input{padding-inline:9px}}
 @media print{.essay-share-toggle,.essay-share-dialog{display:none!important}}
+
+/* Approved German automotive emblems and the essay's cover question. */
+.cover--german-industry{position:relative;container-type:inline-size}
+.cover--german-industry>img.german-cover-title{position:absolute;left:6.5%;top:31%;width:37%;height:auto;padding:0;object-fit:contain;mix-blend-mode:normal;transform:none}
+.essay-page--german-industry .essay-references{font-size:17px;line-height:1.65}
+.essay-page--german-industry .citation{white-space:nowrap}
+.essay-page--german-industry .german-industry-figure>a{display:block;border:0}
+.essay-page--german-industry .german-industry-figure img{height:auto}
+@media(max-width:640px){.essay-page--german-industry .german-industry-figure{margin-inline:-22px}}
