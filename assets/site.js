@@ -1,5 +1,7 @@
+const obtGerman = document.documentElement.lang === "de";
+const obtText = (en, de) => obtGerman ? de : en;
 (()=>{const dialog=document.querySelector('#essay-search'),input=document.querySelector('#search-input'),results=document.querySelector('#search-results'),status=document.querySelector('#search-status');const items=window.OBT_ARTICLES||[];let opener;
-function search(){let query=input.value.trim().toLocaleLowerCase();results.replaceChildren();if(!query){status.textContent='Search all essays in the journal.';return}const words=query.split(/\s+/);const found=items.filter(i=>words.every(w=>(i.title+' '+i.subtitle+' '+i.topic+' '+i.text).toLocaleLowerCase().includes(w)));status.textContent=found.length+' '+(found.length===1?'essay':'essays')+' found';for(const item of found){const link=document.createElement('a');link.className='search-result';link.href=item.url;const h=document.createElement('h3');h.textContent=item.title;const p=document.createElement('p');p.textContent=item.topic+' · '+item.subtitle;link.append(h,p);results.append(link)}}
+function search(){let query=input.value.trim().toLocaleLowerCase();results.replaceChildren();if(!query){status.textContent=obtText("Search all essays in the journal.", "Alle Essays im Journal durchsuchen.");return}const words=query.split(/\s+/);const found=items.filter(i=>words.every(w=>(i.title+' '+i.subtitle+' '+i.topic+' '+i.text).toLocaleLowerCase().includes(w)));status.textContent=found.length+' '+obtText(found.length===1?'essay':'essays',found.length===1?'Essay':'Essays')+' '+obtText('found','gefunden');for(const item of found){const link=document.createElement('a');link.className='search-result';link.href=item.url;const h=document.createElement('h3');h.textContent=item.title;const p=document.createElement('p');p.textContent=item.topic+' · '+item.subtitle;link.append(h,p);results.append(link)}}
 document.querySelectorAll('.search-toggle').forEach(b=>b.addEventListener('click',()=>{opener=b;dialog.showModal();setTimeout(()=>input.focus(),0)}));document.querySelector('.search-close')?.addEventListener('click',()=>dialog.close());dialog?.addEventListener('close',()=>opener?.focus());dialog?.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});input?.addEventListener('input',search);
 const filters=[...document.querySelectorAll('.topic-filter')],cards=[...document.querySelectorAll('.archive-grid .story')];function filter(topic,update=true){if(!filters.length)return;const valid=filters.some(f=>f.dataset.filter===topic);if(!valid)topic='all';filters.forEach(f=>{const selected=f.dataset.filter===topic;f.classList.toggle('is-active',selected);f.setAttribute('aria-pressed',String(selected))});let count=0;cards.forEach(c=>{const show=topic==='all'||c.dataset.topic===topic;c.hidden=!show;if(show)count++});document.querySelector('.results-count').textContent=count+' '+(count===1?'essay':'essays');document.querySelector('#archive-empty').hidden=count!==0;if(update){const u=new URL(location.href);topic==='all'?u.searchParams.delete('topic'):u.searchParams.set('topic',topic);history.replaceState(null,'',u)}}filters.forEach(f=>f.addEventListener('click',()=>filter(f.dataset.filter)));filter(new URLSearchParams(location.search).get('topic')||'all',false);
 document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();const status=document.getElementById(link.getAttribute('aria-describedby'));if(status){status.textContent='The PDF edition is being prepared.';status.setAttribute('role','status')}}));})();
@@ -61,10 +63,10 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
     header.append(row);
   }
   row.classList.add('essay-actions');
-  const toggle = action('button', 'Share', 'share');
+  const toggle = action('button', obtText("Share", "Teilen"), 'share');
   toggle.className = 'essay-share-toggle';
   toggle.dataset.shareEssay = '';
-  toggle.setAttribute('aria-label', 'Share this essay');
+  toggle.setAttribute('aria-label', obtText("Share this essay", "Diesen Essay teilen"));
   toggle.setAttribute('aria-haspopup', 'dialog');
   toggle.setAttribute('aria-controls', 'essay-share-dialog');
   row.append(toggle);
@@ -78,11 +80,11 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
   heading.className = 'essay-share-heading';
   const h2 = document.createElement('h2');
   h2.id = 'essay-share-title';
-  h2.textContent = 'Share this essay';
+  h2.textContent = obtText("Share this essay", "Diesen Essay teilen");
   const close = document.createElement('button');
   close.type = 'button';
   close.className = 'essay-share-close';
-  close.setAttribute('aria-label', 'Close sharing options');
+  close.setAttribute('aria-label', obtText("Close sharing options", "Teilen schließen"));
   close.append(icon('close'));
   heading.append(h2, close);
   const article = document.createElement('p');
@@ -93,7 +95,7 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
   const label = document.createElement('label');
   label.className = 'essay-share-link-label';
   label.htmlFor = 'essay-share-link';
-  label.textContent = 'Link to essay';
+  label.textContent = obtText("Link to essay", "Link zum Essay");
   const copyRow = document.createElement('div');
   copyRow.className = 'essay-share-copy-row';
   const linkInput = document.createElement('input');
@@ -105,12 +107,12 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
   const copy = document.createElement('button');
   copy.type = 'button';
   copy.className = 'essay-share-copy';
-  copy.textContent = 'Copy link';
+  copy.textContent = obtText("Copy link", "Link kopieren");
   copyRow.append(linkInput, copy);
 
   const options = document.createElement('div');
   options.className = 'essay-share-options';
-  const messages = action(nativeAvailable ? 'button' : 'a', 'Text / iMessage', 'message');
+  const messages = action(nativeAvailable ? 'button' : 'a', obtText("Text / iMessage", "SMS / iMessage"), 'message');
   if (nativeAvailable) {
     messages.addEventListener('click', () => shareNative(messages));
   } else {
@@ -118,12 +120,12 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
     const apple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
     messages.href = 'sms:' + (apple ? '&' : '?') + 'body=' + encodeURIComponent(message);
     messages.addEventListener('click', () => {
-      status.textContent = 'If your messaging app does not open, copy the link above and paste it into a message.';
+      status.textContent = obtText("If your messaging app does not open, copy the link above and paste it into a message.", "Falls sich Ihre Nachrichten-App nicht öffnet, kopieren Sie den Link oben in eine Nachricht.");
     });
   }
   options.append(messages);
   const destinations = [
-    ['Email', 'email', 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(message)],
+    [obtText("Email", "E-Mail"), 'email', 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(message)],
     ['WhatsApp', 'whatsapp', 'https://wa.me/?text=' + encodeURIComponent(message)],
     ['Facebook', 'facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)],
     ['X', 'x', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url)],
@@ -140,15 +142,15 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
     options.append(link);
   }
   if (nativeAvailable) {
-    const more = action('button', 'More apps', 'share');
+    const more = action('button', obtText("More apps", "Weitere Apps"), 'share');
     more.addEventListener('click', () => shareNative(more));
     options.append(more);
   }
   const hint = document.createElement('p');
   hint.className = 'essay-share-hint';
   hint.textContent = nativeAvailable
-    ? 'For text or iMessage, choose Messages in your device’s share sheet.'
-    : 'Text sharing opens your messaging app where available.';
+    ? obtText("For text or iMessage, choose Messages in your device’s share sheet.", "Wählen Sie für SMS oder iMessage die Nachrichten-App in den Teilen-Optionen Ihres Geräts.")
+    : obtText("Text sharing opens your messaging app where available.", "SMS teilen öffnet Ihre Nachrichten-App, sofern verfügbar.");
   const status = document.createElement('p');
   status.className = 'essay-share-status';
   status.setAttribute('role', 'status');
@@ -165,7 +167,7 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
       // Resolution can mean handoff, not delivery; do not claim a message was sent.
     } catch (error) {
       if (error.name !== 'AbortError') {
-        status.textContent = 'Your device’s share options are unavailable. You can copy the link or use a service above.';
+        status.textContent = obtText("Your device’s share options are unavailable. You can copy the link or use a service above.", "Die Teilen-Optionen Ihres Geräts sind nicht verfügbar. Sie können den Link kopieren oder einen der Dienste oben nutzen.");
       }
     } finally {
       button.disabled = false;
@@ -190,20 +192,20 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
       try { copied = document.execCommand('copy'); } catch (_) { /* Manual copy below. */ }
     }
     if (copied) {
-      copy.textContent = 'Copied';
-      status.textContent = 'Link copied.';
+      copy.textContent = obtText("Copied", "Kopiert");
+      status.textContent = obtText("Link copied.", "Link kopiert.");
       copy.focus();
     } else {
-      status.textContent = 'The link is selected. Press and hold to copy, or use your keyboard’s Copy command.';
+      status.textContent = obtText("The link is selected. Press and hold to copy, or use your keyboard’s Copy command.", "Der Link ist markiert. Halten Sie ihn zum Kopieren gedrückt oder nutzen Sie den Kopierbefehl Ihrer Tastatur.");
     }
   });
   linkInput.addEventListener('click', selectLink);
   toggle.addEventListener('click', () => {
     if (typeof dialog.showModal !== 'function') {
-      window.prompt('Copy this essay link:', url);
+      window.prompt(obtText("Copy this essay link:", "Link zu diesem Essay kopieren:"), url);
       return;
     }
-    copy.textContent = 'Copy link';
+    copy.textContent = obtText("Copy link", "Link kopieren");
     status.textContent = '';
     dialog.showModal();
     copy.focus();
