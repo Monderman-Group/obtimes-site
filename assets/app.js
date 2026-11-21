@@ -1,8 +1,12 @@
 (() => {
   'use strict';
 
-  const rootURL = new URL('../', window.location.href);
+  const nativeApp = document.documentElement.hasAttribute('data-native-app');
+  const bundleRootURL = new URL('./', window.location.href);
+  const rootURL = nativeApp ? new URL('https://obtimes.com/') : new URL('../', window.location.href);
   const catalogueURL = new URL('assets/app-catalog.json', rootURL);
+  const bundledCatalogueURL = new URL('assets/app-catalog.json', bundleRootURL);
+  const nativeBridge = window.OBT_NATIVE_BRIDGE || null;
   const shell = document.querySelector('[data-app-shell]');
   if (!shell) return;
 
@@ -22,7 +26,8 @@
     progress: 'obt-reader-progress-v1',
     audio: 'obt-reader-audio-v1',
     offline: 'obt-reader-offline-v1',
-    prefs: 'obt-reader-prefs-v1'
+    prefs: 'obt-reader-prefs-v1',
+    catalogue: 'obt-reader-catalogue-v1'
   };
 
   const icons = {
@@ -52,6 +57,145 @@
 
   function writeJSON(key, value) {
     try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) { /* Private mode may limit storage. */ }
+  }
+
+  let nativeDatabasePromise;
+  const nativeObjectURLs = new Map();
+
+  function openNativeDatabase() {
+    if (!nativeApp || !('indexedDB' in window)) return Promise.resolve(null);
+    if (!nativeDatabasePromise) {
+      nativeDatabasePromise = new Promise((resolve, reject) => {
+        const request = indexedDB.open('obt-reader-native-v1', 1);
+        request.onupgradeneeded = () => {
+          const database = request.result;
+          if (!database.objectStoreNames.contains('responses')) database.createObjectStore('responses', {keyPath: 'url'});
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error || new Error('Native storage could not be opened.'));
+      });
+    }
+    return nativeDatabasePromise;
+  }
+
+  async function nativeRecord(url) {
+    const database = await openNativeDatabase();
+    if (!database) return null;
+    return new Promise((resolve, reject) => {
+      const transaction = database.transaction('responses', 'readonly');
+      const request = transaction.objectStore('responses').get(url);
+      request.onsuccess = () => resolve(request.result || null);
+      request.onerror = () => reject(request.error || new Error('Downloaded edition could not be read.'));
+    });
+  }
+
+  async function nativePut(record) {
+    const database = await openNativeDatabase();
+    if (!database) throw new Error('Native storage is unavailable.');
+    return new Promise((resolve, reject) => {
+      const transaction = database.transaction('responses', 'readwrite');
+      transaction.objectStore('responses').put(record);
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error || new Error('Downloaded edition could not be stored.'));
+    });
+  }
+
+  async function nativeDelete(url) {
+    const database = await openNativeDatabase();
+    if (!database) throw new Error('Native storage is unavailable.');
+    return new Promise((resolve, reject) => {
+      const transaction = database.transaction('responses', 'readwrite');
+      transaction.objectStore('responses').delete(url);
+      transaction.oncomplete = () => {
+        const objectURL = nativeObjectURLs.get(url);
+        if (objectURL) URL.revokeObjectURL(objectURL);
+        nativeObjectURLs.delete(url);
+        resolve();
+      };
+      transaction.onerror = () => reject(transaction.error || new Error('Downloaded edition could not be removed.'));
+    });
+  }
+
+  async function nativeClearDownloads() {
+    const database = await openNativeDatabase();
+    if (!database) throw new Error('Native storage is unavailable.');
+    return new Promise((resolve, reject) => {
+      const transaction = database.transaction('responses', 'readwrite');
+      transaction.objectStore('responses').clear();
+      transaction.oncomplete = () => {
+        nativeObjectURLs.forEach(url => URL.revokeObjectURL(url));
+        nativeObjectURLs.clear();
+        resolve();
+      };
+      transaction.onerror = () => reject(transaction.error || new Error('Downloaded editions could not be cleared.'));
+    });
+  }
+
+  async function nativeCacheURLs(urls) {
+    for (const rawURL of [...new Set(urls || [])]) {
+      const url = new URL(rawURL, rootURL).href;
+      const response = await fetch(url, {cache: 'no-store'});
+      if (!response.ok) throw new Error(`Could not download ${new URL(url).pathname}`);
+      await nativePut({
+        url,
+        blob: await response.blob(),
+        contentType: response.headers.get('Content-Type') || 'application/octet-stream',
+        savedAt: Date.now()
+      });
+      const priorObjectURL = nativeObjectURLs.get(url);
+      if (priorObjectURL) URL.revokeObjectURL(priorObjectURL);
+      nativeObjectURLs.delete(url);
+    }
+  }
+
+  async function nativeCachedResponse(url) {
+    const record = await nativeRecord(url);
+    return record ? new Response(record.blob, {headers: {'Content-Type': record.contentType}}) : null;
+  }
+
+  async function nativeAssetURL(url) {
+    if (!nativeApp) return null;
+    if (nativeObjectURLs.has(url)) return nativeObjectURLs.get(url);
+    const record = await nativeRecord(url);
+    if (!record) return null;
+    const objectURL = URL.createObjectURL(record.blob);
+    nativeObjectURLs.set(url, objectURL);
+    return objectURL;
+  }
+
+  async function fetchReaderResource(url, options = {}) {
+    if (!nativeApp) return fetch(url, options);
+    try {
+      const response = await fetch(url, options);
+      if (response.ok) return response;
+    } catch (_) { /* Fall through to the downloaded or bundled edition. */ }
+    const cached = await nativeCachedResponse(url);
+    if (cached) return cached;
+    const parsed = new URL(url);
+    if (parsed.origin === rootURL.origin && parsed.pathname.startsWith('/essays/')) {
+      const bundled = await fetch(new URL(parsed.pathname.replace(/^\//, ''), bundleRootURL));
+      if (bundled.ok) return bundled;
+    }
+    return new Response('', {status: 503, statusText: 'Offline'});
+  }
+
+  async function hydrateNativeMedia(container) {
+    if (!nativeApp) return;
+    await Promise.all([...container.querySelectorAll('[src]')].map(async node => {
+      const source = node.src;
+      const cached = source && await nativeAssetURL(source);
+      if (cached) node.src = cached;
+    }));
+    await Promise.all([...container.querySelectorAll('[srcset]')].map(async node => {
+      const candidates = await Promise.all(node.srcset.split(',').map(async candidate => {
+        const parts = candidate.trim().split(/\s+/);
+        if (!parts[0]) return candidate.trim();
+        const cached = await nativeAssetURL(parts[0]);
+        if (cached) parts[0] = cached;
+        return parts.join(' ');
+      }));
+      node.srcset = candidates.join(', ');
+    }));
   }
 
   function normalizeOfflineState() {
@@ -102,7 +246,76 @@
 
   function absolute(path) {
     if (!path) return '';
-    return new URL(String(path).replace(/^\//, ''), rootURL).href;
+    try {
+      const url = new URL(String(path), rootURL);
+      return url.origin === rootURL.origin ? url.href : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function validateCatalogue(payload) {
+    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('The journal catalogue is invalid.');
+    if (payload.schemaVersion !== 1 || !/^[a-f0-9]{8,64}$/i.test(payload.contentVersion || '')) throw new Error('The journal catalogue version is invalid.');
+    if (!Array.isArray(payload.items) || payload.items.length < 1 || payload.items.length > 1000 || payload.count !== payload.items.length) throw new Error('The journal catalogue contents are invalid.');
+
+    const requiredString = (value, field, maximum, {allowEmpty = false} = {}) => {
+      if (typeof value !== 'string' || value.length > maximum || (!allowEmpty && !value.trim())) throw new Error(`The catalogue field ${field} is invalid.`);
+      return value.trim();
+    };
+    const safeInteger = (value, field, {minimum = 0, maximum = Number.MAX_SAFE_INTEGER} = {}) => {
+      if (!Number.isSafeInteger(value) || value < minimum || value > maximum) throw new Error(`The catalogue field ${field} is invalid.`);
+      return value;
+    };
+    const safeDate = value => {
+      const date = requiredString(value, 'date', 10);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) !== date) throw new Error('The catalogue date is invalid.');
+      return date;
+    };
+    const safeContentPath = (value, field, pattern, {optional = false, versioned = false} = {}) => {
+      if (optional && value === '') return '';
+      const raw = requiredString(value, field, 500);
+      let url;
+      try { url = new URL(raw, rootURL); } catch (_) { throw new Error(`The catalogue field ${field} is invalid.`); }
+      const localPreview = /^(?:localhost|127\.0\.0\.1|\[::1\])$/.test(rootURL.hostname);
+      if (url.origin !== rootURL.origin || (url.protocol !== 'https:' && !(localPreview && url.protocol === 'http:')) || url.username || url.password || url.hash || !pattern.test(url.pathname)) throw new Error(`The catalogue field ${field} is invalid.`);
+      if (url.search && (!versioned || !/^\?v=[a-f0-9]{8,64}$/i.test(url.search))) throw new Error(`The catalogue field ${field} is invalid.`);
+      return `${url.pathname.replace(/^\//, '')}${url.search}`;
+    };
+
+    const seen = new Set();
+    const items = payload.items.map(raw => {
+      if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('A catalogue item is invalid.');
+      const id = requiredString(raw.id, 'id', 120);
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id) || seen.has(id)) throw new Error('A catalogue item identifier is invalid.');
+      seen.add(id);
+      const language = requiredString(raw.language, 'language', 20);
+      if (!/^[a-z]{2}(?:-[A-Z]{2})?$/.test(language)) throw new Error('A catalogue language is invalid.');
+      const contentHash = requiredString(raw.contentHash, 'contentHash', 128);
+      if (!/^[a-f0-9]{8,128}$/i.test(contentHash)) throw new Error('A catalogue content hash is invalid.');
+      return {
+        id,
+        title: requiredString(raw.title, 'title', 300),
+        subtitle: requiredString(raw.subtitle, 'subtitle', 600),
+        topic: requiredString(raw.topic, 'topic', 120),
+        date: safeDate(raw.date),
+        language,
+        path: safeContentPath(raw.path, 'path', /^\/essays\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z]{2}(?:-[a-z]{2})?)?\/$/),
+        cover: safeContentPath(raw.cover, 'cover', /^\/assets\/covers\/[A-Za-z0-9][A-Za-z0-9._-]*\.(?:png|jpe?g|webp|svg)$/i),
+        coverAlt: requiredString(raw.coverAlt, 'coverAlt', 1200, {allowEmpty: true}),
+        pdf: safeContentPath(raw.pdf, 'pdf', /^\/downloads\/[A-Za-z0-9][A-Za-z0-9._-]*\.pdf$/i, {optional: true, versioned: true}),
+        pdfBytes: safeInteger(raw.pdfBytes, 'pdfBytes'),
+        audio: safeContentPath(raw.audio, 'audio', /^\/assets\/audio\/[A-Za-z0-9][A-Za-z0-9._-]*\.(?:m4a|mp3|wav|aac|ogg)$/i, {optional: true, versioned: true}),
+        audioLabel: requiredString(raw.audioLabel, 'audioLabel', 160, {allowEmpty: true}),
+        audioBytes: safeInteger(raw.audioBytes, 'audioBytes'),
+        readingMinutes: safeInteger(raw.readingMinutes, 'readingMinutes', {minimum: 1, maximum: 1440}),
+        wordCount: safeInteger(raw.wordCount, 'wordCount', {minimum: 1}),
+        contentHash,
+        text: requiredString(raw.text, 'text', 2000000)
+      };
+    });
+
+    return {schemaVersion: 1, contentVersion: payload.contentVersion, count: items.length, items};
   }
 
   function escapeHTML(value = '') {
@@ -191,7 +404,7 @@
       <p class="app-card-topic">${escapeHTML(item.topic)}</p>
       <h3><button class="app-card-title" type="button" data-open="${escapeHTML(item.id)}">${escapeHTML(item.title)}</button></h3>
       ${compact ? '' : `<p class="app-card-dek">${escapeHTML(item.subtitle)}</p>`}
-      <p class="app-card-meta"><time datetime="${escapeHTML(item.date)}">${escapeHTML(formatDate(item.date, item.language))}</time><span aria-hidden="true"> · </span>${item.readingMinutes} min read${listened}</p>
+      <p class="app-card-meta"><time datetime="${escapeHTML(item.date)}">${escapeHTML(formatDate(item.date, item.language))}</time><span aria-hidden="true"> · </span>${escapeHTML(item.readingMinutes)} min read${listened}</p>
       <button class="app-card-save${state.saved.has(item.id) ? ' is-saved' : ''}" type="button" data-save="${escapeHTML(item.id)}" aria-label="${state.saved.has(item.id) ? 'Remove from saved essays' : 'Save essay'}">${icon('bookmark')}</button>
       ${progress > .01 && progress < .99 ? `<div class="app-progress" role="progressbar" aria-label="Reading or listening progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(progress * 100)}"><span style="width:${Math.round(progress * 100)}%"></span></div>` : ''}
     </article>`;
@@ -200,7 +413,7 @@
   function renderLatest(item) {
     select('[data-latest]').innerHTML = `<article class="app-hero">
       <button class="app-hero-art" type="button" data-open="${escapeHTML(item.id)}" aria-label="Read ${escapeHTML(item.title)}"><img src="${escapeHTML(absolute(item.cover))}" alt="${escapeHTML(item.coverAlt || '')}"></button>
-      <div class="app-hero-copy"><p class="app-kicker">${escapeHTML(item.topic)}</p><h3>${escapeHTML(item.title)}</h3><p class="app-dek">${escapeHTML(item.subtitle)}</p><p class="app-hero-meta">${escapeHTML(formatDate(item.date, item.language))} · ${item.readingMinutes} min read${item.audio ? ` · ${escapeHTML(item.audioLabel || 'Audio edition')}` : ''}</p><div class="app-hero-actions"><button class="app-primary-button" type="button" data-open="${escapeHTML(item.id)}">Read essay</button>${item.audio ? `<button class="app-secondary-button" type="button" data-listen="${escapeHTML(item.id)}">Listen</button>` : ''}</div></div>
+      <div class="app-hero-copy"><p class="app-kicker">${escapeHTML(item.topic)}</p><h3>${escapeHTML(item.title)}</h3><p class="app-dek">${escapeHTML(item.subtitle)}</p><p class="app-hero-meta">${escapeHTML(formatDate(item.date, item.language))} · ${escapeHTML(item.readingMinutes)} min read${item.audio ? ` · ${escapeHTML(item.audioLabel || 'Audio edition')}` : ''}</p><div class="app-hero-actions"><button class="app-primary-button" type="button" data-open="${escapeHTML(item.id)}">Read essay</button>${item.audio ? `<button class="app-secondary-button" type="button" data-listen="${escapeHTML(item.id)}">Listen</button>` : ''}</div></div>
     </article>`;
   }
 
@@ -285,31 +498,115 @@
     if (focus) select('#app-main')?.focus({preventScroll: true});
   }
 
-  function rewriteImportedURLs(container, pageURL) {
-    container.querySelectorAll('[src]').forEach(node => {
-      const value = node.getAttribute('src');
-      if (value && !value.startsWith('data:')) node.src = new URL(value, pageURL).href;
-    });
-    container.querySelectorAll('[href]').forEach(node => {
-      const value = node.getAttribute('href');
-      if (value && !value.startsWith('#') && !value.startsWith('mailto:') && !value.startsWith('tel:')) node.href = new URL(value, pageURL).href;
-    });
-    container.querySelectorAll('[srcset]').forEach(node => {
-      const value = node.getAttribute('srcset');
-      if (!value) return;
-      node.srcset = value.split(',').map(candidate => {
-        const parts = candidate.trim().split(/\s+/);
-        if (!parts[0] || parts[0].startsWith('data:')) return candidate.trim();
-        parts[0] = new URL(parts[0], pageURL).href;
-        return parts.join(' ');
-      }).join(', ');
-    });
+  function sanitizeImportedContent(container, pageURL) {
+    const allowedTags = new Set([
+      'DIV', 'SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'ASIDE',
+      'H1', 'H2', 'H3', 'H4', 'P', 'A', 'SPAN', 'EM', 'STRONG', 'B', 'I', 'SMALL',
+      'SUP', 'SUB', 'TIME', 'MARK', 'BR', 'HR', 'BLOCKQUOTE', 'Q', 'CITE',
+      'OL', 'UL', 'LI', 'DL', 'DT', 'DD', 'FIGURE', 'FIGCAPTION', 'IMG', 'PICTURE',
+      'SOURCE', 'TABLE', 'THEAD', 'TBODY', 'TFOOT', 'TR', 'TH', 'TD', 'CAPTION',
+      'ABBR', 'CODE', 'PRE', 'S', 'DEL', 'INS', 'KBD', 'VAR', 'DETAILS', 'SUMMARY'
+    ]);
+    const droppedTags = new Set([
+      'SCRIPT', 'STYLE', 'IFRAME', 'FRAME', 'FRAMESET', 'OBJECT', 'EMBED', 'TEMPLATE',
+      'NOSCRIPT', 'FORM', 'INPUT', 'BUTTON', 'TEXTAREA', 'SELECT', 'OPTION', 'AUDIO',
+      'VIDEO', 'TRACK', 'CANVAS', 'SVG', 'MATH', 'LINK', 'META', 'BASE'
+    ]);
+    const globalAttributes = new Set(['class', 'id', 'lang', 'dir', 'title', 'aria-label', 'aria-hidden']);
+    const tagAttributes = {
+      A: new Set(['href']),
+      IMG: new Set(['src', 'srcset', 'sizes', 'width', 'height', 'alt', 'loading', 'decoding']),
+      SOURCE: new Set(['src', 'srcset', 'sizes', 'type', 'media']),
+      TIME: new Set(['datetime']),
+      OL: new Set(['start', 'reversed']),
+      LI: new Set(['value']),
+      TH: new Set(['colspan', 'rowspan', 'scope', 'headers', 'abbr']),
+      TD: new Set(['colspan', 'rowspan', 'headers'])
+    };
+
+    for (const element of [...container.querySelectorAll('*')]) {
+      if (!element.isConnected) continue;
+      if (droppedTags.has(element.tagName)) element.remove();
+      else if (!allowedTags.has(element.tagName)) element.replaceWith(...element.childNodes);
+    }
+
+    const importedElements = [container, ...container.querySelectorAll('*')];
+    const idMap = new Map();
+    const usedIDs = new Set();
+    for (const element of importedElements) {
+      const originalID = element.getAttribute('id')?.trim();
+      if (!originalID) continue;
+      const base = `reader-${originalID.replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '') || 'section'}`;
+      let safeID = base;
+      let suffix = 2;
+      while (usedIDs.has(safeID) || document.getElementById(safeID)) safeID = `${base}-${suffix++}`;
+      usedIDs.add(safeID);
+      idMap.set(originalID, safeID);
+      element.id = safeID;
+    }
+
+    const safeMediaURL = raw => {
+      try {
+        const url = new URL(raw, pageURL);
+        const localPreview = /^(?:localhost|127\.0\.0\.1|\[::1\])$/.test(rootURL.hostname);
+        return url.origin === rootURL.origin && (url.protocol === 'https:' || (localPreview && url.protocol === 'http:')) ? url.href : null;
+      } catch (_) {
+        return null;
+      }
+    };
+    const safeSrcset = raw => {
+      const safe = [];
+      for (const candidate of raw.split(',').map(value => value.trim()).filter(Boolean)) {
+        const [urlPart, descriptor, ...extra] = candidate.split(/\s+/);
+        const url = safeMediaURL(urlPart);
+        if (!url || extra.length || (descriptor && !/^(?:\d+w|(?:\d+(?:\.\d+)?)x)$/.test(descriptor))) continue;
+        safe.push(descriptor ? `${url} ${descriptor}` : url);
+      }
+      return safe.join(', ');
+    };
+
+    for (const element of importedElements) {
+      const permitted = tagAttributes[element.tagName] || new Set();
+      for (const attribute of [...element.attributes]) {
+        const name = attribute.name.toLowerCase();
+        if (!globalAttributes.has(name) && !permitted.has(name)) element.removeAttribute(attribute.name);
+      }
+
+      if (element.tagName === 'A' && element.hasAttribute('href')) {
+        const raw = element.getAttribute('href').trim();
+        if (raw.startsWith('#')) {
+          let originalID = '';
+          try { originalID = decodeURIComponent(raw.slice(1)); } catch (_) { originalID = raw.slice(1); }
+          const safeID = idMap.get(originalID);
+          safeID ? element.setAttribute('href', `#${safeID}`) : element.removeAttribute('href');
+        } else {
+          try {
+            const url = new URL(raw, pageURL);
+            /^https?:$/.test(url.protocol) ? element.setAttribute('href', url.href) : element.removeAttribute('href');
+          } catch (_) {
+            element.removeAttribute('href');
+          }
+        }
+      }
+
+      if ((element.tagName === 'IMG' || element.tagName === 'SOURCE') && element.hasAttribute('src')) {
+        const safeURL = safeMediaURL(element.getAttribute('src'));
+        safeURL ? element.setAttribute('src', safeURL) : element.removeAttribute('src');
+      }
+      if ((element.tagName === 'IMG' || element.tagName === 'SOURCE') && element.hasAttribute('srcset')) {
+        const value = safeSrcset(element.getAttribute('srcset'));
+        value ? element.setAttribute('srcset', value) : element.removeAttribute('srcset');
+      }
+    }
+
+    container.setAttribute('data-essay-authored-content', 'true');
+    return container;
   }
 
   function readerHeader(item) {
     const header = document.createElement('header');
     header.className = 'app-reader-header';
-    header.innerHTML = `<p class="app-kicker">${escapeHTML(item.topic)}</p><h1>${escapeHTML(item.title)}</h1><p class="app-reader-dek">${escapeHTML(item.subtitle)}</p><div class="app-reader-meta"><span>John Elijah</span><time datetime="${escapeHTML(item.date)}">${escapeHTML(formatDate(item.date, item.language))}</time><span>${item.readingMinutes} min read</span></div><div class="app-reader-quick-actions">${item.audio ? `<button class="is-primary" type="button" data-listen="${escapeHTML(item.id)}">Listen to essay</button>` : ''}<button type="button" data-save="${escapeHTML(item.id)}">${state.saved.has(item.id) ? 'Saved' : 'Save for later'}</button></div>`;
+    header.innerHTML = `<p class="app-kicker">${escapeHTML(item.topic)}</p><h1>${escapeHTML(item.title)}</h1><p class="app-reader-dek">${escapeHTML(item.subtitle)}</p><div class="app-reader-meta"><span>John Elijah</span><time datetime="${escapeHTML(item.date)}">${escapeHTML(formatDate(item.date, item.language))}</time><span>${escapeHTML(item.readingMinutes)} min read</span></div><div class="app-reader-quick-actions">${item.audio ? `<button class="is-primary" type="button" data-listen="${escapeHTML(item.id)}">Listen to essay</button>` : ''}<button type="button" data-save="${escapeHTML(item.id)}">${state.saved.has(item.id) ? 'Saved' : 'Save for later'}</button></div>`;
     return header;
   }
 
@@ -326,17 +623,18 @@
     window.scrollTo({top: 0, behavior: 'auto'});
     try {
       const pageURL = absolute(item.path);
-      const response = await fetch(pageURL, {headers: {'X-OBT-Reader': '1'}});
+      const response = await fetchReaderResource(pageURL, nativeApp ? {} : {headers: {'X-OBT-Reader': '1'}});
       if (!response.ok) throw new Error(`Essay returned ${response.status}`);
       const documentText = await response.text();
       const parsed = new DOMParser().parseFromString(documentText, 'text/html');
       const authored = parsed.querySelector('[data-essay-authored-content="true"]');
       if (!authored) throw new Error('Essay content is unavailable');
-      authored.querySelectorAll('script,dialog,form').forEach(node => node.remove());
-      rewriteImportedURLs(authored, pageURL);
+      sanitizeImportedContent(authored, pageURL);
+      const responsiveImages = [...authored.querySelectorAll('[srcset]')].flatMap(node => node.srcset.split(',').map(candidate => candidate.trim().split(/\s+/)[0]));
+      const readerAssets = [pageURL, absolute(item.cover), ...[...authored.querySelectorAll('img[src]')].map(image => image.src), ...responsiveImages].filter((value, index, values) => value && values.indexOf(value) === index);
+      await hydrateNativeMedia(authored);
       readerArticle.replaceChildren(readerHeader(item), document.importNode(authored, true));
-      const responsiveImages = selectAll('[srcset]', readerArticle).flatMap(node => node.srcset.split(',').map(candidate => candidate.trim().split(/\s+/)[0]));
-      state.readerPageURLs = [pageURL, absolute(item.cover), ...selectAll('img[src]', readerArticle).map(image => image.src), ...responsiveImages].filter((value, index, values) => value && values.indexOf(value) === index);
+      state.readerPageURLs = readerAssets;
       select('[data-reader-end]').innerHTML = '<p class="app-kicker">End of essay</p><button type="button" data-view-target="explore">Explore more essays</button>';
       renderReaderActions(item);
       document.title = `${item.title} — On Borrowed Times Reader`;
@@ -398,6 +696,10 @@
   async function shareItem(item) {
     const data = {title: item.title, text: item.subtitle, url: absolute(item.path)};
     try {
+      if (nativeApp && nativeBridge?.share) {
+        await nativeBridge.share(data);
+        return;
+      }
       if (navigator.share && (!navigator.canShare || navigator.canShare(data))) {
         await navigator.share(data);
         return;
@@ -410,6 +712,21 @@
   }
 
   async function sendWorker(message) {
+    if (nativeApp) {
+      if (message.type === 'CACHE_URLS') {
+        await nativeCacheURLs(message.urls);
+        return {ok: true};
+      }
+      if (message.type === 'REMOVE_URLS') {
+        await Promise.all((message.urls || []).map(url => nativeDelete(url)));
+        return {ok: true};
+      }
+      if (message.type === 'CLEAR_READER_DATA') {
+        await nativeClearDownloads();
+        return {ok: true};
+      }
+      throw new Error('Unknown native storage request.');
+    }
     let registration = state.serviceWorker;
     if (!registration?.active && !navigator.serviceWorker?.controller) registration = await navigator.serviceWorker?.ready;
     const worker = registration?.active || navigator.serviceWorker?.controller;
@@ -469,7 +786,12 @@
     if (!record) return;
     const retained = new Set(Object.entries(state.offline).filter(([id]) => id !== item.id).flatMap(([, other]) => other?.urls || []));
     const removable = (record.urls || []).filter(url => !retained.has(url));
-    try { await sendWorker({type: 'REMOVE_URLS', urls: removable}); } catch (_) { /* Local state can still be cleared. */ }
+    try {
+      await sendWorker({type: 'REMOVE_URLS', urls: removable});
+    } catch (error) {
+      announce(error.message || 'The offline download could not be removed.', 5000);
+      return;
+    }
     delete state.offline[item.id];
     writeJSON(keys.offline, state.offline);
     renderLibrary();
@@ -494,7 +816,8 @@
     select('[data-player-image]').src = absolute(item.cover);
     select('[data-player-image]').alt = '';
     if (!same) {
-      audio.src = absolute(item.audio);
+      const audioURL = absolute(item.audio);
+      audio.src = nativeApp ? (await nativeAssetURL(audioURL) || audioURL) : audioURL;
       const stored = state.audioProgress[item.id];
       const speed = [0.75, 1, 1.25, 1.5, 1.75, 2].includes(Number(stored?.speed)) ? Number(stored.speed) : 1;
       audio.playbackRate = speed;
@@ -567,7 +890,12 @@
 
   async function clearReaderData() {
     if (!window.confirm('Clear saved essays, reading progress, audio position and offline downloads from this device?')) return;
-    try { await sendWorker({type: 'CLEAR_READER_DATA'}); } catch (_) { /* Local state is cleared even if the worker is unavailable. */ }
+    try {
+      await sendWorker({type: 'CLEAR_READER_DATA'});
+    } catch (error) {
+      announce(error.message || 'Reader data could not be cleared.', 5000);
+      return;
+    }
     Object.values(keys).forEach(key => localStorage.removeItem(key));
     state.saved.clear();
     state.progress = {};
@@ -595,9 +923,10 @@
   }
 
   async function registerServiceWorker() {
+    if (nativeApp) return;
     if (!('serviceWorker' in navigator)) return;
     try {
-      const workerURL = new URL('app-service-worker.js', rootURL);
+      const workerURL = new URL('app-service-worker.js?v=20261121d', rootURL);
       const registration = await navigator.serviceWorker.register(workerURL, {scope: new URL('app/', rootURL).pathname});
       state.serviceWorker = registration;
       registration.addEventListener('updatefound', () => {
@@ -621,6 +950,12 @@
 
   function bindEvents() {
     document.addEventListener('click', event => {
+      const nativeExternal = event.target.closest('[data-native-external]');
+      if (nativeApp && nativeExternal?.href && nativeBridge?.openExternal) {
+        event.preventDefault();
+        nativeBridge.openExternal(nativeExternal.href);
+        return;
+      }
       const open = event.target.closest('[data-open]');
       if (open) { openReader(state.byId.get(open.dataset.open)); return; }
       const save = event.target.closest('[data-save]');
@@ -676,8 +1011,21 @@
       const url = new URL(link.href, location.href);
       const item = state.catalogue.find(candidate => new URL(absolute(candidate.path)).pathname === url.pathname);
       if (item) { event.preventDefault(); openReader(item); }
-      else if (url.origin !== location.origin) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+      else if (nativeApp && /^https?:$/.test(url.protocol) && nativeBridge?.openExternal) {
+        event.preventDefault();
+        nativeBridge.openExternal(url.href);
+      } else if (url.origin !== location.origin) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
     });
+
+    document.addEventListener('error', event => {
+      const image = event.target;
+      if (!nativeApp || !(image instanceof HTMLImageElement) || image.dataset.bundleFallback === 'true') return;
+      let source;
+      try { source = new URL(image.src); } catch (_) { return; }
+      if (source.origin !== rootURL.origin || !/^\/(?:assets\/covers|media)\//.test(source.pathname)) return;
+      image.dataset.bundleFallback = 'true';
+      image.src = new URL(source.pathname.replace(/^\//, ''), bundleRootURL).href;
+    }, true);
 
     window.addEventListener('scroll', updateReaderProgress, {passive: true});
     window.addEventListener('beforeunload', () => saveAudioProgress(true));
@@ -685,6 +1033,21 @@
     window.addEventListener('hashchange', () => { if (!history.state) handleRoute(); });
     window.addEventListener('online', updateNetworkStatus);
     window.addEventListener('offline', updateNetworkStatus);
+    window.addEventListener('obt-native-back', () => {
+      if (!nativeApp) return;
+      if (offlineDialog.open) { offlineDialog.close(); return; }
+      if (settingsDialog.open) { settingsDialog.close(); return; }
+      if (state.view === 'reader') { closeReader(); return; }
+      if (state.view !== 'home') { setView('home'); return; }
+      nativeBridge?.exit?.();
+    });
+    window.addEventListener('obt-native-url', event => {
+      if (!nativeApp || !event.detail?.url) return;
+      let incoming;
+      try { incoming = new URL(event.detail.url); } catch (_) { return; }
+      const item = state.catalogue.find(candidate => new URL(absolute(candidate.path)).pathname === incoming.pathname);
+      if (item) openReader(item);
+    });
 
     select('[data-confirm-offline]').addEventListener('click', confirmOfflineDownload);
     settingsDialog.addEventListener('change', event => {
@@ -721,20 +1084,24 @@
       navigator.mediaSession.setActionHandler('seekto', details => { if (details.seekTime != null) audio.currentTime = details.seekTime; });
     }
 
-    window.addEventListener('beforeinstallprompt', event => {
-      event.preventDefault(); state.installPrompt = event; select('[data-install]').hidden = false;
-    });
-    const installed = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
-    const iosLike = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (!installed && iosLike) select('[data-install]').hidden = false;
-    select('[data-install]').addEventListener('click', async () => {
-      if (!state.installPrompt) { announce('Use your browser menu and choose “Add to Home Screen” or “Install app.”', 6000); return; }
-      state.installPrompt.prompt();
-      await state.installPrompt.userChoice;
-      state.installPrompt = null;
+    if (!nativeApp) {
+      window.addEventListener('beforeinstallprompt', event => {
+        event.preventDefault(); state.installPrompt = event; select('[data-install]').hidden = false;
+      });
+      const installed = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+      const iosLike = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (!installed && iosLike) select('[data-install]').hidden = false;
+      select('[data-install]').addEventListener('click', async () => {
+        if (!state.installPrompt) { announce('Use your browser menu and choose “Add to Home Screen” or “Install app.”', 6000); return; }
+        state.installPrompt.prompt();
+        await state.installPrompt.userChoice;
+        state.installPrompt = null;
+        select('[data-install]').hidden = true;
+      });
+      window.addEventListener('appinstalled', () => { select('[data-install]').hidden = true; announce('On Borrowed Times is installed.'); });
+    } else {
       select('[data-install]').hidden = true;
-    });
-    window.addEventListener('appinstalled', () => { select('[data-install]').hidden = true; announce('On Borrowed Times is installed.'); });
+    }
   }
 
   async function init() {
@@ -743,9 +1110,22 @@
     bindEvents();
     registerServiceWorker();
     try {
-      const response = await fetch(catalogueURL, {cache: 'no-cache'});
-      if (!response.ok) throw new Error('The journal catalogue is unavailable.');
-      const payload = await response.json();
+      let payload;
+      try {
+        const response = await fetch(catalogueURL, {cache: 'no-cache'});
+        if (!response.ok) throw new Error('The journal catalogue is unavailable.');
+        payload = validateCatalogue(await response.json());
+        if (nativeApp) writeJSON(keys.catalogue, payload);
+      } catch (error) {
+        if (!nativeApp) throw error;
+        try {
+          payload = validateCatalogue(readJSON(keys.catalogue, null));
+        } catch (_) {
+          const bundledResponse = await fetch(bundledCatalogueURL, {cache: 'no-cache'});
+          if (!bundledResponse.ok) throw error;
+          payload = validateCatalogue(await bundledResponse.json());
+        }
+      }
       state.catalogue = payload.items.map(item => ({...item, searchText: `${item.title} ${item.subtitle} ${item.topic} ${item.text || ''}`.toLocaleLowerCase()})).sort((a, b) => b.date.localeCompare(a.date));
       state.byId = new Map(state.catalogue.map(item => [item.id, item]));
       normalizeOfflineState();

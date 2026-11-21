@@ -1,7 +1,7 @@
 /* On Borrowed Times Reader: a small, private offline layer with no tracking. */
 'use strict';
 
-const VERSION = '20261121c';
+const VERSION = '20261121d';
 const SHELL_CACHE = `obt-app-shell-${VERSION}`;
 const CONTENT_CACHE = `obt-app-content-${VERSION}`;
 const MEDIA_CACHE = `obt-app-media-${VERSION}`;
@@ -18,8 +18,8 @@ function scoped(path) {
 const shellPaths = [
   'app/',
   'manifest.webmanifest?v=20261121c',
-  'assets/app.css?v=20261120b',
-  'assets/app.js?v=20261120b',
+  'assets/app.css?v=20261121d',
+  'assets/app.js?v=20261121d',
   'assets/app-catalog.json',
   'assets/app-icon.svg?v=20261121c',
   'assets/app-icon-192.png?v=20261121c',

@@ -4,3 +4,13 @@
 .env.*
 __pycache__/
 _site/
+node_modules/
+mobile/www/
+
+# Native signing material belongs in the developer accounts and local keychains,
+# never in the publication repository.
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+android/key.properties

@@ -25,6 +25,14 @@ scripts/build_app_catalog.py` and commit the resulting
 `assets/app-catalog.json`; the check above and the publication workflow reject
 a stale catalogue.
 
+The acquisition page is available at `http://localhost:8766/app/download/`.
+It offers the installable web reader immediately and reveals the official App
+Store and Google Play links only after each permanent listing URL and its
+official badge asset path have been added to `assets/app-links.js`. The same
+configuration updates the availability language on the acquisition page and
+homepage; bump the `app-links.js` query version in `assets/site.js` and
+`app/download/index.html` when those values change.
+
 ## Publishing
 
 The GitHub Pages Actions workflow validates these sources and stages only the
@@ -53,6 +61,33 @@ For a domain-root build, pass an empty base path instead. `_site/` is ignored by
 Git; source page links remain rooted at the publication domain.
 
 Workflow reference: [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## iPhone and Android editions
+
+The native reader uses Capacitor with one shared application shell for iPhone,
+iPad and Android. The shell is bundled with the application; current editorial
+content is read from `obtimes.com`, with the published catalogue and essay text
+included as an offline fallback. Audio, PDFs and newly published media remain
+on demand so the store package does not duplicate the journal archive.
+
+Install Node dependencies with `npm ci`, then run:
+
+```sh
+npm run mobile:sync
+npm run mobile:assets
+```
+
+`mobile:sync` rebuilds the private staging directory at `mobile/www/` and
+copies it into the native projects. Open `ios/App/App.xcodeproj` in Xcode for an
+iPhone build or open `android/` in Android Studio for an Android App Bundle.
+Generated web assets and all signing material are intentionally ignored by Git.
+
+The provisional bundle/package identifier is `com.obtimes.reader`. It must be
+approved before the first store upload because both stores treat that identifier
+as permanent. Release signing, store agreements, privacy declarations and final
+submissions must be completed inside the publication owner's verified Apple and
+Google developer accounts. The release copy and owner checklist live in
+`store/`.
 
 ## Content and design
 

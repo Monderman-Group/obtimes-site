@@ -1,0 +1,27 @@
+{
+  "name": "obtimes-reader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "On Borrowed Times reader for web, iOS and Android",
+  "scripts": {
+    "mobile:prepare": "python3 scripts/build_app_catalog.py --check && python3 scripts/validate_site.py && node scripts/prepare_mobile.mjs",
+    "mobile:assets": "node scripts/prepare_native_assets.mjs && capacitor-assets generate --ios --assetPath resources && capacitor-assets generate --android --assetPath resources",
+    "mobile:sync": "npm run mobile:prepare && cap sync",
+    "mobile:doctor": "cap doctor"
+  },
+  "dependencies": {
+    "@capacitor/app": "8.1.2",
+    "@capacitor/browser": "8.0.5",
+    "@capacitor/core": "8.6.2",
+    "@capacitor/share": "8.0.3",
+    "@capacitor/splash-screen": "8.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/assets": "4.0.0",
+    "@capacitor/cli": "8.6.2",
+    "@capacitor/ios": "8.6.2",
+    "esbuild": "0.28.2",
+    "sharp": "0.35.5"
+  }
+}

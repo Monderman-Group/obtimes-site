@@ -247,10 +247,36 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
   const footer = document.querySelector('.site-footer nav');
   if (footer && !footer.querySelector('[data-reader-app-link]')) {
     const link = document.createElement('a');
-    link.href = new URL('app/', siteRoot).href;
-    link.textContent = document.documentElement.lang.startsWith('de') ? 'Reader-App' : 'Reader app';
+    link.href = new URL('app/download/', siteRoot).href;
+    link.textContent = document.documentElement.lang.startsWith('de') ? 'App herunterladen' : 'Get the app';
     link.dataset.readerAppLink = '';
     footer.prepend(link);
+  }
+  const selected = document.querySelector('main .selected');
+  function renderAppPromo() {
+    if (!selected || document.querySelector('[data-app-promo]')) return;
+    const links = window.OBT_APP_LINKS || {};
+    const appleReady = Boolean(links.apple && links.appleBadge);
+    const googleReady = Boolean(links.google && links.googleBadge);
+    let availability = 'Web app available now. iPhone and Android editions are being prepared.';
+    if (appleReady && googleReady) availability = 'Available now on the web, the App Store, and Google Play.';
+    else if (appleReady) availability = 'Available now on the web and the App Store. The Android edition is being prepared.';
+    else if (googleReady) availability = 'Available now on the web and Google Play. The iPhone and iPad edition is being prepared.';
+    const promo = document.createElement('section');
+    promo.className = 'app-promo';
+    promo.dataset.appPromo = '';
+    promo.innerHTML = '<img src="/assets/app-icon.svg?v=20261121c" width="160" height="160" alt=""><div class="app-promo-copy"><p class="eyebrow">The reader app</p><h2>Take the journal with you.</h2><p>Read, listen, save your place, and keep essays available offline. No account, advertising, or reader tracking.</p><div class="app-promo-actions"><a class="app-promo-primary" href="/app/download/">Get the app</a><a class="app-promo-secondary" href="/app/">Open the web reader</a></div><small>' + availability + '</small></div>';
+    selected.insertAdjacentElement('afterend', promo);
+  }
+  if (selected) {
+    if (window.OBT_APP_LINKS) renderAppPromo();
+    else {
+      const appLinks = document.createElement('script');
+      appLinks.src = new URL('assets/app-links.js?v=20261121-app1', siteRoot).href;
+      appLinks.addEventListener('load', renderAppPromo, {once: true});
+      appLinks.addEventListener('error', renderAppPromo, {once: true});
+      document.head.append(appLinks);
+    }
   }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(new URL('app-service-worker.js', siteRoot), {scope: siteRoot.pathname}).catch(() => {});

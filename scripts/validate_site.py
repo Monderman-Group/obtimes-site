@@ -13,6 +13,22 @@ ROOT = Path(__file__).resolve().parent.parent
 errors = []
 checked = 0
 
+# Local dependencies and Capacitor's copied web bundles are build inputs, not
+# GitHub Pages sources. Validate their authored source files elsewhere, without
+# mistaking generated copies and third-party package examples for site pages.
+NON_PUBLIC_PREFIXES = (
+    'node_modules',
+    'mobile/www',
+    'ios/App/App/public',
+    'android/app/src/main/assets/public',
+    'android/app/build',
+)
+
+
+def is_non_public(file):
+    relative = file.relative_to(ROOT).as_posix()
+    return any(relative == prefix or relative.startswith(prefix + '/') for prefix in NON_PUBLIC_PREFIXES)
+
 
 class Page(HTMLParser):
     def __init__(self):
@@ -45,6 +61,8 @@ class Page(HTMLParser):
 pages = {}
 email_action_pages = {'email/confirm/index.html', 'email/unsubscribe/index.html'}
 for file in ROOT.rglob('*.html'):
+    if is_non_public(file):
+        continue
     parser = Page()
     parser.feed(file.read_text())
     pages[file] = parser
@@ -82,6 +100,8 @@ for file, page in pages.items():
                 errors.append(f'{relative}: missing fragment {reference}')
 
 for css in ROOT.rglob('*.css'):
+    if is_non_public(css):
+        continue
     text = css.read_text()
     if 'OptimaPreview' in text or 'optima-local-preview' in text:
         errors.append('Unexpected proprietary preview font embed')
@@ -95,6 +115,8 @@ for css in ROOT.rglob('*.css'):
                 errors.append(f'{css.relative_to(ROOT)}: missing {reference}')
 
 for file in ROOT.rglob('*'):
+    if is_non_public(file):
+        continue
     if file.is_symlink():
         errors.append('Symbolic link is not permitted in Pages artifact')
     if not file.is_file() or '.git' in file.relative_to(ROOT).parts:
