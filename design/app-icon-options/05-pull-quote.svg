@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Pull Quote</title>
+  <desc id="desc">An oversized black opening quotation mark on an uneven yellow highlighter mark over paper.</desc>
+  <rect width="1024" height="1024" rx="210" fill="#fafbf7"/>
+  <path d="M112 262 334 242 518 257 714 236 910 260 896 778 712 798 514 782 330 804 104 780Z" fill="#f5e329"/>
+  <text x="510" y="758" fill="#191b19" font-family="Georgia,serif" font-size="690" font-weight="700" text-anchor="middle">“</text>
+</svg>

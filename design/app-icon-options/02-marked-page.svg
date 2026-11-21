@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Marked Page</title>
+  <desc id="desc">A cream journal page with bold black text bars and one yellow highlighted passage.</desc>
+  <rect width="1024" height="1024" rx="210" fill="#191b19"/>
+  <path d="M220 140H700L820 260V860H220Z" fill="#fafbf7"/>
+  <path d="M700 140V260H820Z" fill="#d8ddd2"/>
+  <rect x="310" y="330" width="404" height="74" rx="8" fill="#191b19"/>
+  <path d="M282 466 438 451 602 462 754 448 746 594 592 608 436 598 286 612Z" fill="#f5e329"/>
+  <rect x="310" y="492" width="404" height="74" rx="8" fill="#191b19"/>
+  <rect x="310" y="652" width="316" height="74" rx="8" fill="#191b19"/>
+</svg>

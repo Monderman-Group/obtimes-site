@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Highlighted B</title>
+  <desc id="desc">A large black serif B on an uneven yellow highlighter mark over a black field.</desc>
+  <rect width="1024" height="1024" rx="210" fill="#191b19"/>
+  <path d="M150 240 332 222 520 235 704 216 870 238 858 790 692 807 514 792 328 812 142 786Z" fill="#f5e329"/>
+  <text x="510" y="744" fill="#191b19" font-family="Georgia,serif" font-size="650" font-weight="700" text-anchor="middle">B</text>
+</svg>

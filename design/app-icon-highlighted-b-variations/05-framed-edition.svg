@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Framed Edition</title>
+  <desc id="desc">A formal cream editorial frame around the highlighted serif B on black.</desc>
+  <rect width="1024" height="1024" fill="#191b19"/>
+  <rect x="102" y="102" width="820" height="820" rx="142" fill="none" stroke="#fafbf7" stroke-width="26"/>
+  <path d="M154 284 314 264 482 276 654 256 870 282 860 730 704 750 526 736 348 758 148 734Z" fill="#f5e329"/>
+  <text x="510" y="724" fill="#191b19" font-family="Georgia,serif" font-size="600" font-weight="700" text-anchor="middle">B</text>
+</svg>

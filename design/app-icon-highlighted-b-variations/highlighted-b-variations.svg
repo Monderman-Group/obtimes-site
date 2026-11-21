@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1160" role="img" aria-labelledby="title desc">
+  <title id="title">Five Highlighted B app icon variations</title>
+  <desc id="desc">Five closely related treatments of the approved On Borrowed Times highlighted B icon.</desc>
+  <defs>
+    <clipPath id="app-mask"><rect width="1024" height="1024" rx="210"/></clipPath>
+    <g id="v1">
+      <rect width="1024" height="1024" fill="#191b19"/>
+      <path d="M82 270 250 250 430 262 620 242 944 268 934 742 748 762 548 748 338 770 76 744Z" fill="#f5e329"/>
+      <text x="510" y="732" fill="#191b19" font-family="Georgia,serif" font-size="620" font-weight="700" text-anchor="middle">B</text>
+    </g>
+    <g id="v2">
+      <rect width="1024" height="1024" fill="#191b19"/>
+      <path d="M70 302 252 266 430 280 652 248 952 282 918 738 738 772 536 754 318 782 86 750Z" fill="#f5e329"/>
+      <text x="510" y="732" fill="#191b19" font-family="Georgia,serif" font-size="620" font-weight="700" text-anchor="middle">B</text>
+    </g>
+    <g id="v3">
+      <rect width="1024" height="1024" fill="#191b19"/>
+      <path d="M82 270 250 250 430 262 620 242 944 268 934 742 748 762 548 748 338 770 76 744Z" fill="#f5e329"/>
+      <g transform="translate(5 0) scale(14.5 13.5)">
+        <path fill="#191b19" fill-rule="evenodd" d="M22 18h12c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-14 11H22V18Zm7 6v10h4c4 0 6-2 6-5s-2-5-6-5h-4Zm0 16v10h5c5 0 7-2 7-5s-2-5-7-5h-5Z"/>
+      </g>
+    </g>
+    <g id="v4">
+      <rect width="1024" height="1024" fill="#191b19"/>
+      <rect x="64" y="64" width="896" height="896" rx="176" fill="#fafbf7"/>
+      <path d="M126 278 286 258 452 270 628 250 898 278 888 738 714 758 532 744 342 766 120 742Z" fill="#f5e329"/>
+      <text x="510" y="724" fill="#191b19" font-family="Georgia,serif" font-size="600" font-weight="700" text-anchor="middle">B</text>
+    </g>
+    <g id="v5">
+      <rect width="1024" height="1024" fill="#191b19"/>
+      <rect x="102" y="102" width="820" height="820" rx="142" fill="none" stroke="#fafbf7" stroke-width="26"/>
+      <path d="M154 284 314 264 482 276 654 256 870 282 860 730 704 750 526 736 348 758 148 734Z" fill="#f5e329"/>
+      <text x="510" y="724" fill="#191b19" font-family="Georgia,serif" font-size="600" font-weight="700" text-anchor="middle">B</text>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1160" fill="#f6f7f2"/>
+  <text x="80" y="82" fill="#191b19" font-family="Georgia,serif" font-size="48">Highlighted B — five variations</text>
+  <text x="82" y="126" fill="#566052" font-family="Arial,sans-serif" font-size="22" letter-spacing="1">THE SAME IDEA · DIFFERENT EMPHASIS</text>
+
+  <g transform="translate(72 176)">
+    <rect width="448" height="426" rx="24" fill="#fff" stroke="#d8ddd2" stroke-width="2"/>
+    <svg x="84" y="36" width="280" height="280" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v1"/></g></svg>
+    <svg x="368" y="38" width="48" height="48" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v1"/></g></svg>
+    <text x="34" y="356" fill="#191b19" font-family="Georgia,serif" font-size="30">1. Broad Swipe</text>
+    <text x="34" y="392" fill="#566052" font-family="Arial,sans-serif" font-size="18">The highlight reads immediately as a mark.</text>
+  </g>
+
+  <g transform="translate(576 176)">
+    <rect width="448" height="426" rx="24" fill="#fff" stroke="#d8ddd2" stroke-width="2"/>
+    <svg x="84" y="36" width="280" height="280" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v2"/></g></svg>
+    <svg x="368" y="38" width="48" height="48" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v2"/></g></svg>
+    <text x="34" y="356" fill="#191b19" font-family="Georgia,serif" font-size="30">2. Angled Swipe</text>
+    <text x="34" y="392" fill="#566052" font-family="Arial,sans-serif" font-size="18">More visibly hand-marked and energetic.</text>
+  </g>
+
+  <g transform="translate(1080 176)">
+    <rect width="448" height="426" rx="24" fill="#fff" stroke="#d8ddd2" stroke-width="2"/>
+    <svg x="84" y="36" width="280" height="280" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v3"/></g></svg>
+    <svg x="368" y="38" width="48" height="48" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v3"/></g></svg>
+    <text x="34" y="356" fill="#191b19" font-family="Georgia,serif" font-size="30">3. Favicon Weight</text>
+    <text x="34" y="392" fill="#566052" font-family="Arial,sans-serif" font-size="18">Sturdier letterform; strongest when tiny.</text>
+  </g>
+
+  <g transform="translate(324 658)">
+    <rect width="448" height="426" rx="24" fill="#fff" stroke="#d8ddd2" stroke-width="2"/>
+    <svg x="84" y="36" width="280" height="280" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v4"/></g></svg>
+    <svg x="368" y="38" width="48" height="48" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v4"/></g></svg>
+    <text x="34" y="356" fill="#191b19" font-family="Georgia,serif" font-size="30">4. Paper Inverse</text>
+    <text x="34" y="392" fill="#566052" font-family="Arial,sans-serif" font-size="18">Lighter, but protected by a black rim.</text>
+  </g>
+
+  <g transform="translate(828 658)">
+    <rect width="448" height="426" rx="24" fill="#fff" stroke="#d8ddd2" stroke-width="2"/>
+    <svg x="84" y="36" width="280" height="280" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v5"/></g></svg>
+    <svg x="368" y="38" width="48" height="48" viewBox="0 0 1024 1024"><g clip-path="url(#app-mask)"><use href="#v5"/></g></svg>
+    <text x="34" y="356" fill="#191b19" font-family="Georgia,serif" font-size="30">5. Framed Edition</text>
+    <text x="34" y="392" fill="#566052" font-family="Arial,sans-serif" font-size="18">More formal; reads like a journal seal.</text>
+  </g>
+</svg>

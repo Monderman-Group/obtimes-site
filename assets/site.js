@@ -228,13 +228,14 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
   if (!document.querySelector('link[rel="manifest"]')) {
     const manifest = document.createElement('link');
     manifest.rel = 'manifest';
-    manifest.href = new URL('manifest.webmanifest', siteRoot).href;
+    manifest.href = new URL('manifest.webmanifest?v=20261121c', siteRoot).href;
     document.head.append(manifest);
   }
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
     const icon = document.createElement('link');
     icon.rel = 'apple-touch-icon';
-    icon.href = new URL('assets/app-icon-180.png', siteRoot).href;
+    icon.sizes = '180x180';
+    icon.href = new URL('assets/app-icon-180.png?v=20261121c', siteRoot).href;
     document.head.append(icon);
   }
   if (!document.querySelector('meta[name="theme-color"]')) {

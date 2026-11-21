@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Open Folio</title>
+  <desc id="desc">An open cream folio on black with one line highlighted yellow.</desc>
+  <rect width="1024" height="1024" rx="210" fill="#191b19"/>
+  <path d="M130 246 466 316V824L130 750Z" fill="#fafbf7"/>
+  <path d="M558 316 894 246V750L558 824Z" fill="#fafbf7"/>
+  <path d="M488 305H536V834L512 856 488 834Z" fill="#d8ddd2"/>
+  <rect x="210" y="418" width="190" height="36" rx="6" fill="#191b19"/>
+  <rect x="210" y="510" width="190" height="36" rx="6" fill="#191b19"/>
+  <path d="M612 446 714 432 826 444 814 568 708 580 610 570Z" fill="#f5e329"/>
+  <rect x="630" y="482" width="154" height="42" rx="6" fill="#191b19"/>
+  <rect x="630" y="622" width="154" height="36" rx="6" fill="#191b19"/>
+</svg>

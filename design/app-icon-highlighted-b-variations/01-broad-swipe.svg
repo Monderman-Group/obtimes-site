@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Broad Swipe</title>
+  <desc id="desc">A large black serif B on a wide, unmistakably horizontal yellow highlighter swipe.</desc>
+  <rect width="1024" height="1024" fill="#191b19"/>
+  <path d="M82 270 250 250 430 262 620 242 944 268 934 742 748 762 548 748 338 770 76 744Z" fill="#f5e329"/>
+  <text x="510" y="732" fill="#191b19" font-family="Georgia,serif" font-size="620" font-weight="700" text-anchor="middle">B</text>
+</svg>

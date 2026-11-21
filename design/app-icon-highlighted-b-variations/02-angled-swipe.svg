@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Angled Swipe</title>
+  <desc id="desc">The highlighted serif B with a subtly angled, more visibly hand-drawn yellow swipe.</desc>
+  <rect width="1024" height="1024" fill="#191b19"/>
+  <path d="M70 302 252 266 430 280 652 248 952 282 918 738 738 772 536 754 318 782 86 750Z" fill="#f5e329"/>
+  <text x="510" y="732" fill="#191b19" font-family="Georgia,serif" font-size="620" font-weight="700" text-anchor="middle">B</text>
+</svg>

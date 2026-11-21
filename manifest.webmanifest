@@ -12,12 +12,13 @@
   "theme_color": "#191b19",
   "categories": ["books", "news", "education"],
   "icons": [
-    {"src": "assets/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "assets/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+    {"src": "assets/app-icon-192.png?v=20261121c", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/app-icon-512.png?v=20261121c", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/app-icon-512-maskable.png?v=20261121c", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ],
   "shortcuts": [
-    {"name": "Latest essays", "short_name": "Latest", "url": "./app/#home", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]},
-    {"name": "Explore the journal", "short_name": "Explore", "url": "./app/#explore", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]},
-    {"name": "Saved essays", "short_name": "Library", "url": "./app/#library", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]}
+    {"name": "Latest essays", "short_name": "Latest", "url": "./app/#home", "icons": [{"src": "assets/app-icon-192.png?v=20261121c", "sizes": "192x192", "type": "image/png"}]},
+    {"name": "Explore the journal", "short_name": "Explore", "url": "./app/#explore", "icons": [{"src": "assets/app-icon-192.png?v=20261121c", "sizes": "192x192", "type": "image/png"}]},
+    {"name": "Saved essays", "short_name": "Library", "url": "./app/#library", "icons": [{"src": "assets/app-icon-192.png?v=20261121c", "sizes": "192x192", "type": "image/png"}]}
   ]
 }

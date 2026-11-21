@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Favicon Weight</title>
+  <desc id="desc">The broad yellow swipe with the sturdier B shape already used by the On Borrowed Times favicon.</desc>
+  <rect width="1024" height="1024" fill="#191b19"/>
+  <path d="M82 270 250 250 430 262 620 242 944 268 934 742 748 762 548 748 338 770 76 744Z" fill="#f5e329"/>
+  <g transform="translate(5 0) scale(14.5 13.5)">
+    <path fill="#191b19" fill-rule="evenodd" d="M22 18h12c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-14 11H22V18Zm7 6v10h4c4 0 6-2 6-5s-2-5-6-5h-4Zm0 16v10h5c5 0 7-2 7-5s-2-5-7-5h-5Z"/>
+  </g>
+</svg>
