@@ -1,7 +1,7 @@
 /* On Borrowed Times Reader: a small, private offline layer with no tracking. */
 'use strict';
 
-const VERSION = '20261120b';
+const VERSION = '20261121a';
 const SHELL_CACHE = `obt-app-shell-${VERSION}`;
 const CONTENT_CACHE = `obt-app-content-${VERSION}`;
 const MEDIA_CACHE = `obt-app-media-${VERSION}`;
