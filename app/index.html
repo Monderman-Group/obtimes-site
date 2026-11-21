@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reader App — On Borrowed Times</title>
+<meta name="description" content="Read, listen to and save essays from On Borrowed Times in a private, installable reader.">
+<meta name="theme-color" content="#191b19">
+<meta name="color-scheme" content="light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Borrowed Times">
+<link rel="canonical" href="https://obtimes.com/app/">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="../assets/app-icon.svg">
+<link rel="apple-touch-icon" href="../assets/app-icon-180.png">
+<link rel="stylesheet" href="../assets/app.css?v=20261120b">
+<meta property="og:site_name" content="On Borrowed Times">
+<meta property="og:title" content="Reader App — On Borrowed Times">
+<meta property="og:description" content="Read, listen to and save essays from On Borrowed Times in a private, installable reader.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://obtimes.com/app/">
+<meta property="og:image" content="https://obtimes.com/assets/app-icon-512.png">
+<meta property="og:image:alt" content="On Borrowed Times app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reader App — On Borrowed Times">
+<meta name="twitter:description" content="Read, listen to and save essays from On Borrowed Times in a private, installable reader.">
+<meta name="twitter:image" content="https://obtimes.com/assets/app-icon-512.png">
+<script src="../assets/app.js?v=20261120b" defer></script>
+</head>
+<body>
+<a class="app-skip" href="#app-main">Skip to the reader</a>
+<div class="app-shell" data-app-shell>
+  <header class="app-topbar">
+    <a class="app-brand" href="../" aria-label="On Borrowed Times website">
+      <span class="app-brand-line"><span>ON</span><mark>BORROWED</mark><span>TIMES</span></span>
+      <span class="app-brand-caption">Reader</span>
+    </a>
+    <div class="app-top-actions">
+      <span class="app-network" data-network-status role="status" aria-live="polite">Online</span>
+      <button class="app-install" type="button" data-install hidden>Install app</button>
+      <button class="app-icon-button" type="button" data-settings aria-label="Reading settings" title="Reading settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21h-4v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3.1 14H3v-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3.1V3h4v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.1v4h-.1a1.7 1.7 0 0 0-1.5 1Z"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <nav class="app-nav" aria-label="Reader sections">
+      <button class="app-nav-item is-active" type="button" data-view="home" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8"></path><path d="M5 10v11h14V10M9 21v-7h6v7"></path></svg><span>Home</span>
+      </button>
+      <button class="app-nav-item" type="button" data-view="explore">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg><span>Explore</span>
+      </button>
+      <button class="app-nav-item" type="button" data-view="library">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"></path></svg><span>Library</span>
+      </button>
+    </nav>
+
+    <main class="app-main" id="app-main" tabindex="-1">
+      <div class="app-loading" data-loading role="status">
+        <span class="app-loading-mark" aria-hidden="true"></span>
+        <p>Opening the journal…</p>
+      </div>
+
+      <section class="app-screen" data-screen="home" hidden>
+        <header class="app-screen-heading app-home-heading">
+          <div><p class="app-kicker">Independent arguments</p><h1>Read past the headline.</h1></div>
+          <p>Current events and enduring questions, with room to think.</p>
+        </header>
+        <div data-continue-section></div>
+        <section class="app-section" aria-labelledby="latest-heading">
+          <div class="app-section-heading"><div><p class="app-kicker">New in the journal</p><h2 id="latest-heading">Latest essay</h2></div></div>
+          <div data-latest></div>
+        </section>
+        <section class="app-section" aria-labelledby="recent-heading">
+          <div class="app-section-heading"><h2 id="recent-heading">Recent essays</h2><button class="app-text-button" type="button" data-go-explore>Explore all</button></div>
+          <div class="app-card-grid" data-recent></div>
+        </section>
+      </section>
+
+      <section class="app-screen" data-screen="explore" hidden>
+        <header class="app-screen-heading">
+          <div><p class="app-kicker">The full journal</p><h1>Explore</h1></div>
+          <p>Search the argument, not just the title.</p>
+        </header>
+        <div class="app-explore-tools">
+          <label class="app-search"><span class="visually-hidden">Search essays</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg><input type="search" data-app-search placeholder="Search essays and ideas" autocomplete="off"></label>
+          <div class="app-filter-row" data-topic-filters role="group" aria-label="Filter by topic"></div>
+          <div class="app-filter-secondary">
+            <label><input type="checkbox" data-listen-filter> Available to listen</label>
+            <label for="app-sort">Order</label>
+            <select id="app-sort" data-sort><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select>
+          </div>
+        </div>
+        <p class="app-results-count" data-results-count aria-live="polite"></p>
+        <div class="app-card-grid app-card-grid--archive" data-explore-results></div>
+        <div class="app-empty" data-explore-empty hidden><h2>No essay found</h2><p>Try a broader search or another topic.</p></div>
+      </section>
+
+      <section class="app-screen" data-screen="library" hidden>
+        <header class="app-screen-heading">
+          <div><p class="app-kicker">Private to this device</p><h1>Your library</h1></div>
+          <p>Saved essays, offline editions and the pieces you have started.</p>
+        </header>
+        <section class="app-section" aria-labelledby="saved-heading"><div class="app-section-heading"><h2 id="saved-heading">Saved</h2></div><div class="app-card-grid" data-saved></div><div class="app-empty" data-saved-empty><p>Save an essay and it will appear here. Nothing is sent to an account or server.</p></div></section>
+        <section class="app-section" aria-labelledby="offline-heading"><div class="app-section-heading"><h2 id="offline-heading">Available offline</h2></div><div class="app-list" data-offline></div><div class="app-empty" data-offline-empty><p>Download an essay from the reader to keep its text and illustrations available without a connection.</p></div></section>
+        <section class="app-section" aria-labelledby="history-heading"><div class="app-section-heading"><h2 id="history-heading">In progress</h2></div><div class="app-list" data-history></div><div class="app-empty" data-history-empty><p>Essays you begin reading or listening to will appear here.</p></div></section>
+      </section>
+
+      <section class="app-screen app-reader" data-screen="reader" hidden>
+        <div class="app-reader-progress" aria-hidden="true"><span data-reader-progress-bar></span></div>
+        <div class="app-reader-toolbar">
+          <button class="app-text-button app-back" type="button" data-reader-back>Back</button>
+          <div class="app-reader-actions">
+            <button class="app-icon-button" type="button" data-reader-save aria-label="Save essay" title="Save essay"></button>
+            <button class="app-icon-button" type="button" data-reader-offline aria-label="Download essay for offline reading" title="Download for offline reading"></button>
+            <button class="app-icon-button" type="button" data-reader-share aria-label="Share essay" title="Share essay"></button>
+          </div>
+        </div>
+        <article data-reader-article></article>
+        <div class="app-reader-end" data-reader-end></div>
+      </section>
+    </main>
+  </div>
+
+  <aside class="app-player" data-player hidden aria-label="Audio player">
+    <audio data-audio preload="metadata"></audio>
+    <button class="app-player-cover" type="button" data-player-open aria-label="Open current essay"><img data-player-image alt=""></button>
+    <div class="app-player-copy"><p data-player-kicker>Now listening</p><button type="button" data-player-open><span data-player-title></span></button></div>
+    <div class="app-player-controls">
+      <button class="app-player-skip" type="button" data-audio-back aria-label="Back 15 seconds">−15</button>
+      <button class="app-player-play" type="button" data-audio-play aria-label="Play"><svg data-play-icon viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"></path></svg></button>
+      <button class="app-player-skip" type="button" data-audio-forward aria-label="Forward 15 seconds">+15</button>
+    </div>
+    <div class="app-player-timeline"><span data-audio-current>0:00</span><input type="range" min="0" max="100" step="0.1" value="0" data-audio-seek aria-label="Audio position"><span data-audio-duration>0:00</span></div>
+    <div class="app-player-options"><label for="app-audio-speed">Speed</label><select id="app-audio-speed" data-audio-speed><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="1.75">1.75×</option><option value="2">2×</option></select><button class="app-icon-button" type="button" data-audio-download aria-label="Download audio for offline listening" title="Download audio"></button><button class="app-icon-button" type="button" data-player-close aria-label="Close player" title="Close player"></button></div>
+  </aside>
+
+  <div class="app-toast" data-toast role="status" aria-live="polite" hidden></div>
+</div>
+
+<dialog class="app-settings" data-settings-dialog aria-labelledby="settings-title">
+  <form method="dialog">
+    <div class="app-dialog-heading"><div><p class="app-kicker">This device only</p><h2 id="settings-title">Reading settings</h2></div><button class="app-icon-button" value="close" aria-label="Close settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg></button></div>
+    <fieldset><legend>Text size</legend><div class="app-segmented"><label><input type="radio" name="text-size" value="compact"><span>Compact</span></label><label><input type="radio" name="text-size" value="standard" checked><span>Standard</span></label><label><input type="radio" name="text-size" value="large"><span>Large</span></label></div></fieldset>
+    <fieldset><legend>Line spacing</legend><div class="app-segmented"><label><input type="radio" name="line-space" value="close"><span>Close</span></label><label><input type="radio" name="line-space" value="standard" checked><span>Standard</span></label><label><input type="radio" name="line-space" value="open"><span>Open</span></label></div></fieldset>
+    <section class="app-privacy-note"><h3>A reader without surveillance</h3><p>Saved essays, progress and audio position stay in this browser. The app has no account, advertising or analytics pixel.</p></section>
+    <button class="app-danger-button" type="button" data-clear-reader>Clear saved data and downloads</button>
+  </form>
+</dialog>
+
+<dialog class="app-offline-dialog" data-offline-dialog aria-labelledby="offline-dialog-title">
+  <form method="dialog">
+    <div class="app-dialog-heading"><div><p class="app-kicker">Keep this edition</p><h2 id="offline-dialog-title">Download for offline reading</h2></div><button class="app-icon-button" value="close" aria-label="Close download options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg></button></div>
+    <p>The essay, references and illustrations will be stored on this device.</p>
+    <label class="app-check"><input type="checkbox" data-offline-audio><span><strong>Include the audio edition</strong><small data-offline-audio-size></small></span></label>
+    <div class="app-dialog-actions"><button class="app-secondary-button" value="close">Cancel</button><button class="app-primary-button" type="button" data-confirm-offline>Download</button></div>
+  </form>
+</dialog>
+</body>
+</html>

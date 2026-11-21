@@ -9,12 +9,21 @@ There are no advertisements, pixels, payments or required accounts.
 No package installation or build process is required.
 
 ```sh
+python3 scripts/build_app_catalog.py --check
 python3 scripts/validate_site.py
 python3 -m http.server 8766
 ```
 
 Open `http://localhost:8766/`. The site uses root-relative links because it is
 intended to run at the custom domain root.
+
+The installable reader is available at `http://localhost:8766/app/`. Localhost
+is treated as a secure context by current browsers, so its service worker and
+offline controls can be exercised without a local TLS certificate. Whenever an
+essay page or its audio/PDF assets change, run `python3
+scripts/build_app_catalog.py` and commit the resulting
+`assets/app-catalog.json`; the check above and the publication workflow reject
+a stale catalogue.
 
 ## Publishing
 
@@ -32,6 +41,12 @@ Pushes to `main` and manual workflow dispatches can deploy once the repository
 and Pages configuration are ready. No generated package, Jekyll theme,
 Squarespace template or third-party site builder is used.
 
+The workflow verifies the source-bound reader catalogue before validating and
+staging the publication. The staged public artifact includes `/app/`, the web
+app manifest, service worker, reader assets and the catalogue. Relative manifest
+and service-worker paths keep installation working both at `obtimes.com` and at
+the temporary GitHub Pages project path.
+
 To test the project-path build locally, run
 `python3 scripts/prepare_pages.py --base-path /obtimes-site --output _site`.
 For a domain-root build, pass an empty base path instead. `_site/` is ignored by
@@ -46,6 +61,12 @@ Workflow reference: [GitHub's custom Pages workflow documentation](https://docs.
 - Matching optional downloads are in `downloads/`.
 - `assets/site.css` holds the responsive design; `assets/site.js` implements
   search and topic filtering using the local `assets/search-index.js` catalogue.
+- `/app/` is a private, installable reader built from the same canonical essay
+  pages. `scripts/build_app_catalog.py` derives its catalogue from those pages;
+  it does not maintain a second copy of the prose. Saved essays, reading
+  progress and audio position remain in the reader's browser. The service worker
+  caches only the small application shell by default. Essay media and audio are
+  stored only when a reader explicitly requests an offline edition.
 - Every essay with an `.essay-header` and `h1` receives the shared Share action
   from `assets/site.js`, including future essays. It opens a keyboard-accessible
   dialog for copying the canonical link, text/iMessage, email, and social services.

@@ -220,3 +220,38 @@ document.querySelectorAll('[data-pdf-pending]').forEach(link=>link.addEventListe
     }
   });
 })();
+
+/* Make the publication installable and expose the private reader app. */
+(() => {
+  const ownScript = document.currentScript || [...document.scripts].find(script => /\/assets\/site\.js(?:\?|$)/.test(script.src));
+  const siteRoot = ownScript?.src ? new URL('../', ownScript.src) : new URL('/', location.href);
+  if (!document.querySelector('link[rel="manifest"]')) {
+    const manifest = document.createElement('link');
+    manifest.rel = 'manifest';
+    manifest.href = new URL('manifest.webmanifest', siteRoot).href;
+    document.head.append(manifest);
+  }
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    const icon = document.createElement('link');
+    icon.rel = 'apple-touch-icon';
+    icon.href = new URL('assets/app-icon-180.png', siteRoot).href;
+    document.head.append(icon);
+  }
+  if (!document.querySelector('meta[name="theme-color"]')) {
+    const theme = document.createElement('meta');
+    theme.name = 'theme-color';
+    theme.content = '#191b19';
+    document.head.append(theme);
+  }
+  const footer = document.querySelector('.site-footer nav');
+  if (footer && !footer.querySelector('[data-reader-app-link]')) {
+    const link = document.createElement('a');
+    link.href = new URL('app/', siteRoot).href;
+    link.textContent = document.documentElement.lang.startsWith('de') ? 'Reader-App' : 'Reader app';
+    link.dataset.readerAppLink = '';
+    footer.prepend(link);
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register(new URL('app-service-worker.js', siteRoot), {scope: siteRoot.pathname}).catch(() => {});
+  }
+})();

@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
+import importlib.util
 import json
 import hashlib
 import re
@@ -115,6 +116,71 @@ for file in ROOT.rglob('*'):
         if file.suffix.lower() in ('.html', '.js') and re.search(r'connect\.facebook\.net|googletagmanager\.com/gtag|fbq\s*\(', text):
             errors.append('Unexpected tracking script: ' + relative)
 
+# The installable reader is built from the same canonical essay pages. Keep
+# its manifest, catalogue and public assets source-bound instead of allowing a
+# second, manually maintained content list to drift away from the journal.
+manifest_path = ROOT / 'manifest.webmanifest'
+catalogue_path = ROOT / 'assets/app-catalog.json'
+service_worker_path = ROOT / 'app-service-worker.js'
+reader_page = ROOT / 'app/index.html'
+catalogue_items = []
+if not manifest_path.is_file():
+    errors.append('Reader manifest missing')
+else:
+    try:
+        manifest = json.loads(manifest_path.read_text())
+        if manifest.get('start_url') != './app/' or manifest.get('scope') != './app/':
+            errors.append('Reader manifest must use portable relative start_url and scope values')
+        if manifest.get('display') != 'standalone':
+            errors.append('Reader manifest must declare standalone display')
+        icons = manifest.get('icons', [])
+        if not icons:
+            errors.append('Reader manifest has no icons')
+        for icon in icons:
+            source = ROOT / unquote(urlsplit(icon.get('src', '')).path)
+            if not icon.get('src') or not source.is_file():
+                errors.append('Reader manifest icon missing: ' + icon.get('src', '<empty>'))
+    except (json.JSONDecodeError, TypeError, ValueError) as error:
+        errors.append('Reader manifest is invalid: ' + str(error))
+if not service_worker_path.is_file():
+    errors.append('Reader service worker missing')
+if not reader_page.is_file():
+    errors.append('Reader page missing')
+if not catalogue_path.is_file():
+    errors.append('Reader catalogue missing')
+else:
+    try:
+        catalogue = json.loads(catalogue_path.read_text())
+        catalogue_items = catalogue.get('items', [])
+        if catalogue.get('schemaVersion') != 1 or catalogue.get('count') != len(catalogue_items):
+            errors.append('Reader catalogue schema or count is invalid')
+        ids = [item.get('id') for item in catalogue_items]
+        paths = [item.get('path') for item in catalogue_items]
+        if not ids or len(ids) != len(set(ids)) or any(not item for item in ids):
+            errors.append('Reader catalogue IDs must be present and unique')
+        if len(paths) != len(set(paths)) or any(not item for item in paths):
+            errors.append('Reader catalogue paths must be present and unique')
+        for item in catalogue_items:
+            page_path = ROOT / unquote(urlsplit(item.get('path', '')).path)
+            if item.get('path', '').endswith('/'):
+                page_path /= 'index.html'
+            if not page_path.is_file():
+                errors.append('Reader catalogue page missing: ' + item.get('path', '<empty>'))
+            for field in ('cover', 'pdf', 'audio'):
+                value = item.get(field, '')
+                if not value:
+                    continue
+                asset = ROOT / unquote(urlsplit(value).path)
+                if not asset.is_file():
+                    errors.append(f'Reader catalogue {field} missing: {value}')
+        spec = importlib.util.spec_from_file_location('build_app_catalog', ROOT / 'scripts/build_app_catalog.py')
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        if catalogue != builder.build():
+            errors.append('Reader catalogue is out of date; run scripts/build_app_catalog.py')
+    except (json.JSONDecodeError, TypeError, ValueError, OSError) as error:
+        errors.append('Reader catalogue is invalid: ' + str(error))
+
 assert (ROOT / 'CNAME').read_text().strip() == 'obtimes.com'
 assert (ROOT / '.nojekyll').exists()
 assert (ROOT / 'assets/fonts/OFL.txt').is_file()
@@ -129,6 +195,14 @@ expected_urls = {
 listed_urls = [entry.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text for entry in sitemap]
 if len(listed_urls) != len(set(listed_urls)) or set(listed_urls) != expected_urls:
     errors.append('Sitemap must include each indexable canonical page exactly once, excluding email action pages')
-report = {'passed': not errors, 'html_pages': len(pages), 'essay_pages': 21, 'optional_pdfs': 21, 'local_references_checked': checked, 'errors': errors}
+report = {
+    'passed': not errors,
+    'html_pages': len(pages),
+    'essay_pages': 21,
+    'optional_pdfs': 21,
+    'app_catalogue_items': len(catalogue_items),
+    'local_references_checked': checked,
+    'errors': errors,
+}
 print(json.dumps(report, indent=2))
 sys.exit(0 if not errors else 1)

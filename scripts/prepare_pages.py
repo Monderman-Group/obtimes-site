@@ -19,8 +19,15 @@ if output == ROOT or ROOT in output.parents and output.parts[len(ROOT.parts)] no
 output.mkdir(parents=True, exist_ok=True)
 if any(path.is_symlink() for path in output.rglob('*')):
     raise ValueError('Use an output directory without symbolic links')
-top_files = {'index.html', '404.html', 'CNAME', 'robots.txt', 'sitemap.xml', '.nojekyll', 'forms-integration.json'}
-top_directories = {'assets', 'media', 'downloads', 'essays', 'topics', 'about', 'submissions', 'standards', 'subscribe', 'privacy', 'email'}
+top_files = {
+    'index.html', '404.html', 'CNAME', 'robots.txt', 'sitemap.xml',
+    '.nojekyll', 'forms-integration.json', 'manifest.webmanifest',
+    'app-service-worker.js',
+}
+top_directories = {
+    'assets', 'media', 'downloads', 'essays', 'topics', 'about',
+    'submissions', 'standards', 'subscribe', 'privacy', 'email', 'app',
+}
 
 
 def prefixed(value):

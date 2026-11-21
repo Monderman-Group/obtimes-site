@@ -1,0 +1,23 @@
+{
+  "id": "./app/",
+  "name": "On Borrowed Times Reader",
+  "short_name": "Borrowed Times",
+  "description": "Read, listen to and save independent essays from On Borrowed Times.",
+  "lang": "en-US",
+  "start_url": "./app/",
+  "scope": "./app/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#fafbf7",
+  "theme_color": "#191b19",
+  "categories": ["books", "news", "education"],
+  "icons": [
+    {"src": "assets/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Latest essays", "short_name": "Latest", "url": "./app/#home", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]},
+    {"name": "Explore the journal", "short_name": "Explore", "url": "./app/#explore", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]},
+    {"name": "Saved essays", "short_name": "Library", "url": "./app/#library", "icons": [{"src": "assets/app-icon-192.png", "sizes": "192x192"}]}
+  ]
+}
