@@ -30,7 +30,9 @@
 .essay-audio-options{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:13px;line-height:1.5;color:var(--muted)}
 .essay-audio-options select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid #a1aa98;border-radius:0;min-height:36px;padding:5px 26px 5px 8px}
 .essay-audio-options select:focus-visible{outline:2px solid #968500;outline-offset:3px}
-.essay-audio-options a{margin-left:auto;border-bottom:1px solid #91998b;color:var(--ink)}
+.essay-audio-options a{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;margin-left:auto;padding:5px 10px;border:1px solid #a1aa98;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.35}
+.essay-audio-options a:hover{border-color:#7d867a;background:var(--cover);text-decoration:none}
+.essay-audio-options a:focus-visible{outline:2px solid #968500;outline-offset:3px}
 .essay-audio-error{font-size:15px;line-height:1.5;color:var(--muted);margin:14px 0 0}
 @media(max-width:560px){.essay-audio{width:calc(100% - 40px);margin-bottom:20px}.essay-audio-summary{gap:8px}.essay-audio-meta{font-size:12px}.essay-audio-options{gap:8px}.essay-audio-options a{margin-left:auto}}
 
