@@ -206,8 +206,8 @@ else:
 assert (ROOT / 'CNAME').read_text().strip() == 'obtimes.com'
 assert (ROOT / '.nojekyll').exists()
 assert (ROOT / 'assets/fonts/OFL.txt').is_file()
-assert len(list((ROOT / 'essays').glob('*/index.html'))) == 21
-assert len(list((ROOT / 'downloads').glob('*.pdf'))) == 21
+assert len(list((ROOT / 'essays').glob('*/index.html'))) == 22
+assert len(list((ROOT / 'downloads').glob('*.pdf'))) == 22
 sitemap = ET.parse(ROOT / 'sitemap.xml').getroot()
 expected_urls = {
     page.canonicals[0] for file, page in pages.items()
@@ -220,8 +220,8 @@ if len(listed_urls) != len(set(listed_urls)) or set(listed_urls) != expected_url
 report = {
     'passed': not errors,
     'html_pages': len(pages),
-    'essay_pages': 21,
-    'optional_pdfs': 21,
+    'essay_pages': 22,
+    'optional_pdfs': 22,
     'app_catalogue_items': len(catalogue_items),
     'local_references_checked': checked,
     'errors': errors,
