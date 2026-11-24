@@ -68,6 +68,9 @@ for file in ROOT.rglob('*.html'):
     pages[file] = parser
 for file, page in pages.items():
     relative = file.relative_to(ROOT).as_posix()
+    source = file.read_text()
+    if 'class="site-header"' in source and '<a class="nav-subscribe" href="/subscribe/' not in source:
+        errors.append(f'{relative}: main navigation is missing Subscribe')
     if relative in email_action_pages:
         if not page.noindex or page.meta.get('referrer') != 'no-referrer':
             errors.append(f'{relative}: email action privacy metadata missing')
@@ -98,6 +101,16 @@ for file, page in pages.items():
         elif url.fragment and target.suffix == '.html':
             if unquote(url.fragment) not in pages.get(target, Page()).ids:
                 errors.append(f'{relative}: missing fragment {reference}')
+
+subscription_action = (ROOT / 'assets/subscription-action.js').read_text()
+for expected in (
+    "kind === 'unsubscribe'",
+    'globalThis.setTimeout(oneClickUnsubscribe, 0)',
+    'form.requestSubmit(button)',
+    "ACTIONS = Object.freeze({ confirm: 'confirm_commit', unsubscribe: 'unsubscribe_commit' })",
+):
+    if expected not in subscription_action:
+        errors.append('One-click unsubscribe contract is incomplete: ' + expected)
 
 for css in ROOT.rglob('*.css'):
     if is_non_public(css):

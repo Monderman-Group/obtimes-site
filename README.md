@@ -136,8 +136,10 @@ agreement. No automatic newsletter is sent when the site publishes an essay.
 The adapter keeps only a random submission reference and sent flag in the
 browser history to reduce duplicates; no email or manuscript is stored there.
 
-Local contract and behavior checks pass. Live end-to-end email/submission
-behavior has not been tested by creating a subscription or manuscript record.
+Local contract and behavior checks pass. Owner-only live tests verified the
+confirmation email, pending-to-active transition, unsubscribe lifecycle,
+private editorial record and owner alert. All test subscriptions were removed.
+External-recipient deliverability has not been independently verified.
 The backend's Sheet IDs, signing secret and private records remain outside this
 repository. Its operating flags and permission checks are managed separately
 in the publication's Workspace account.

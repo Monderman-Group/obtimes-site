@@ -2,6 +2,7 @@
   "publication": "On Borrowed Times",
   "site": "https://obtimes.com",
   "policy_version": "2026-10-23-v1",
+  "privacy_notice_version": "2026-11-23-v3",
   "connection_status": "public_routes_and_owner_test_lifecycle_verified; external_email_deliverability_unverified",
   "endpoint_configured": true,
   "configuration_file": "assets/forms-adapter.js",
@@ -34,7 +35,9 @@
     "tracking_pixels": false,
     "pending_configuration_disables_all_form_fields": true,
     "submission_history_reference": "Only a random request UUID and submitted Boolean; no email or manuscript",
-    "email_links_require_explicit_post": true,
+    "confirmation_link_requires_explicit_post": true,
+    "unsubscribe_link_posts_after_one_reader_click": true,
+    "unsubscribe_get_does_not_mutate": true,
     "email_action_pages_clear_url_fragment_before_other_scripts": true
   },
   "verification": {
@@ -44,7 +47,8 @@
     "anonymous_form_rendering": "passed in signed-out browser",
     "anonymous_invalid_payload_rejection": "passed; no recipient or manuscript submitted",
     "known_platform_limit": "First-party email action pages avoid the observed multi-account Google GET-routing failure; native POST lifecycle passed in the affected browser. Legacy hosted helper GET URLs may still fail; direct editor email fallback is available.",
-    "external_recipient_deliverability": "unverified; no external recipient was contacted"
+    "external_recipient_deliverability": "unverified; no external recipient was contacted",
+    "one_click_unsubscribe_frontend_contract": "signed fragment is cleared before other scripts; the unsubscribe page submits one native POST and retains a manual fallback"
   },
   "endpoint": "https://script.google.com/macros/s/AKfycbx5kqYyRao8RYbyymfdbZgqkXym6v_nuFU4b4WqNPqn9RFEE2aAhbKzmtnFirLaJ8EiEQ/exec"
 }

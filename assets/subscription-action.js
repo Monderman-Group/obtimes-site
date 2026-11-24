@@ -1,5 +1,6 @@
-/* Signed email links stay on the journal until the reader explicitly acts.
- * The service validates the signature and preference change; this page does not.
+/* Signed email links stay on the journal. Confirmation waits for an explicit
+ * button; unsubscribe performs one signed POST after the reader follows the
+ * email link. The service validates the signature and preference change.
  */
 (() => {
   'use strict';
@@ -41,6 +42,17 @@
       ready = false;
       if (fields) fields.disabled = true;
       if (button) button.disabled = true;
+    };
+    const oneClickUnsubscribe = () => {
+      if (kind !== 'unsubscribe' || !ready || submitting || !signedToken) return;
+      message('Unsubscribing. The email service will confirm the result on the next page.');
+      try {
+        if (typeof form.requestSubmit === 'function') form.requestSubmit(button);
+        else if (button && typeof button.click === 'function') button.click();
+        else throw new Error('Automatic submission unavailable');
+      } catch (_) {
+        message('Select the button once to stop email updates. The next page will confirm the result.');
+      }
     };
     disable();
 
@@ -96,9 +108,12 @@
       ready = true;
       if (fields) fields.disabled = false;
       if (button) button.disabled = false;
-      message(kind === 'unsubscribe'
-        ? 'Select the button to stop email updates. The next page will confirm whether this link is valid and your preference was saved.'
-        : 'Select the button to confirm email updates. The next page will confirm whether this link is valid and your subscription was activated.');
+      if (kind === 'unsubscribe') {
+        message('Unsubscribing. No sign-in or additional form is required.');
+        globalThis.setTimeout(oneClickUnsubscribe, 0);
+      } else {
+        message('Select the button to confirm email updates. The next page will confirm whether this link is valid and your subscription was activated.');
+      }
     } catch (_) {
       signedToken = null;
       disable();
