@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://obtimes.com/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/about/</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://obtimes.com/essays/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/essays/can-europes-social-model-save-itself/</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://obtimes.com/topics/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://obtimes.com/privacy/</loc>
@@ -130,5 +130,9 @@
   <url>
     <loc>https://obtimes.com/essays/why-the-usual-case-against-socialism-no-longer-works/</loc>
     <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://obtimes.com/essays/how-apple-and-microsoft-lost-their-head-start-in-ai/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
 </urlset>
